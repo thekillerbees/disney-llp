@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <!-- BHODATA = 'Mon $mon_op-$mon_cl, Tue $tue_op-$tue_cl, Wed $wed_op-$wed_cl, Thu $thu_op-$thu_cl, Fri $fri_op-$fri_cl, Sat $sat_op-$sat_cl, Sun $sun_op-$sun_cl'; -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name='format-detection' content='telephone=no' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disney Store in <TMPL_VAR  NAME="city">, <TMPL_VAR NAME="state"><TMPL_VAR NAME="province"> | Toy Store</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Disney merchandise including toys, clothing, theme park merchandise, costumes and more. Located at <TMPL_VAR  NAME="address1"> <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state">, <TMPL_VAR  NAME="postalcode">" />
+
+<link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>				
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TPTHD46');</script>
+        <!-- End Google Tag Manager -->
+
+
+		<link type="text/css" href="/w2gi/css/style.css" rel="stylesheet" media="all"/>
+		
+	<!-- <link rel="stylesheet" type="text/css" href="//stores.shopdisney.com/css/disney-responsive.local.dm.css"> -->
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css">     
+    <link rel="stylesheet" type="text/css" href="/css/2021/local.2021.css">
+
+		<script type="text/javascript" src="/w2gi/javascript/backbone/bb/lib/jquery.js"></script>
+        <script src="/slick/slick.min.js"></script>
+		<script>
+            var W2GI = {
+                collection : {},
+                config : {
+                    appkey : '<TMPL_VAR NAME="appkey">',
+                    pageObserve : ['linktrack'],
+                    autoStart : true,
+                    locator : {
+                        cgeo : false,
+                        theme : null,
+                        cdirections : false,
+                        formdata : {
+                            geoip : true,
+                            dataview : 'store_default',
+                            limit : 250,
+                            geolocs : {
+                                geoloc : [{
+                                    addressline : '',
+                                    country : '',
+                                    latitude : '',
+                                    longitude : ''
+                                }]
+                            },
+                            searchradius : '20|50|75|100|500'
+                        },
+                        drivingdirections : {
+                            disableDynamicRoutes : false,
+                            formdata : {
+                                dataview : 'store_default',
+                                geolocs : {
+                                    geoloc : [{
+                                        address1 : '',
+                                        city : '',
+                                        state : '',
+                                        province : '',
+                                        postalcode : '',
+                                        addressline : '',
+                                        country : '',
+                                        latitude : '',
+                                        longitude : ''
+                                    }]
+                                }
+                            }
+                        },
+                        imgPath : 'https://hosted.where2getit.com/disney/images/zoom2017/',
+                        controls : [{
+                            name : 'panZoom', // use panZoomBar if needs the full
+                            // bar
+                            options : {
+                                zoomWheelEnabled : false
+                            }
+                        }],
+                        //noZoomOnPan: true,
+                        //zoom: 15,
+                        dynamicSearch : false,
+                        routeStyle : {
+                            strokeWidth : 8,
+                            strokeOpacity : 0.5,
+                            strokeColor : '#0000FF'
+                        },
+                      sources: [                       
+                               { 
+                                   name: 'Google Normal',
+                                       options: {
+                                       disableDoubleClickZoom : true,
+                                       displayName : 'Map',
+                                       projection: 'EPSG:900913', 
+                                       units: 'm', 
+                                       type: 'roadmap', 
+                                       maxZoomLevel:18
+                                      
+                                   }
+                               }
+
+                           ]
+
+                    }
+                }
+            };
+           
+           
+            W2GI.collection.poi = [
+            <tmpl_if name="pois">
+            <tmpl_loop name = "pois" > {
+                poinum : '<TMPL_VAR ESCAPE=HTML NAME="poinum">',
+                icon : '<TMPL_VAR ESCAPE=HTML NAME="icon">',
+                org_icon : '<TMPL_VAR ESCAPE=HTML NAME="org_icon">',
+                name : '<TMPL_VAR ESCAPE=HTML NAME="name">',
+                address1 : '<TMPL_VAR ESCAPE=HTML NAME="address1">',
+                address2 : '<TMPL_VAR ESCAPE=HTML NAME="address2">',
+                city : '<TMPL_VAR ESCAPE=HTML NAME="city">',
+                state : '<TMPL_VAR ESCAPE=HTML NAME="state">',
+                province : '<TMPL_VAR ESCAPE=HTML NAME="province">',
+                postalcode : '<TMPL_VAR ESCAPE=HTML NAME="postalcode">',
+                country : '<TMPL_VAR ESCAPE=HTML NAME="country">',
+                latitude : '<TMPL_VAR ESCAPE=HTML NAME="latitude">',
+                longitude : '<TMPL_VAR ESCAPE=HTML NAME="longitude">',
+                phone : '<TMPL_VAR ESCAPE=HTML NAME="phone">',                
+                clientkey : '<TMPL_VAR ESCAPE=HTML NAME="clientkey">',
+                uid : '<TMPL_VAR ESCAPE=HTML NAME="uid">',
+                main_loc : '<TMPL_VAR ESCAPE=HTML NAME="main_loc">',
+                loc_url : '<TMPL_VAR ESCAPE=HTML NAME="loc_url">'
+            } <tmpl_unless name="__last__">,</tmpl_unless></tmpl_loop>
+            <tmpl_else> 
+            {
+            poinum : '<TMPL_VAR ESCAPE=HTML NAME="poinum">',
+            icon : '<TMPL_VAR ESCAPE=HTML NAME="icon">',
+            org_icon : '<TMPL_VAR ESCAPE=HTML NAME="org_icon">',
+            name : '<TMPL_VAR ESCAPE=HTML NAME="name">',
+            address1 : '<TMPL_VAR ESCAPE=HTML NAME="address1">',
+            address2 : '<TMPL_VAR ESCAPE=HTML NAME="address2">',
+            city : '<TMPL_VAR ESCAPE=HTML NAME="city">',
+            state : '<TMPL_VAR ESCAPE=HTML NAME="state">',
+            province : '<TMPL_VAR ESCAPE=HTML NAME="province">',
+            postalcode : '<TMPL_VAR ESCAPE=HTML NAME="postalcode">',
+            country : '<TMPL_VAR ESCAPE=HTML NAME="country">',
+            latitude : '<TMPL_VAR ESCAPE=HTML NAME="latitude">',
+            longitude : '<TMPL_VAR ESCAPE=HTML NAME="longitude">',
+            phone : '<TMPL_VAR ESCAPE=HTML NAME="phone">',            
+            clientkey : '<TMPL_VAR ESCAPE=HTML NAME="clientkey">',
+            uid : '<TMPL_VAR ESCAPE=HTML NAME="uid">',
+            main_loc : '<TMPL_VAR ESCAPE=HTML NAME="main_loc">',
+            loc_url : '<TMPL_VAR ESCAPE=HTML NAME="loc_url">'
+            }
+            </tmpl_if>
+            ]
+
+  for (var index = 0; index < W2GI.collection.poi.length; index++) {
+             //W2GI.collection.poi[index].icon = W2GI.collection.poi[index].org_icon; <!-- needs to enable this line when pushed to production. This is for showing the original map icon instead of the default main location. -->
+
+
+              W2GI.collection.poi[index].name = W2GI.collection.poi[index].name.replace(" & ", "&");
+              //console.log(W2GI.collection.poi[index].name);
+
+              //W2GI.collection.poi[index].subname = W2GI.collection.poi[index].subname.replace(" & ", "&");
+              //console.log(W2GI.collection.poi[index].icon);
+
+            }
+
+		</script>
+		<script data-main="/w2gi/javascript/backbone/bb/dist/bones.min" src="/w2gi/javascript/backbone/bb/lib/require.js"></script>
+		<script type="text/javascript">
+            //document.observe('w2gi:bubbleOpen', function() {
+            jQuery(document).on("w2gi:locatorloaded", function () {
+                //console.log("loaded");
+
+                setTimeout(function(){
+                    parent.postMessage("w2gi:iframeHeightUpdated" + "//" + $('#w2gi_wrapper').height() + "//" + $('#w2gi_wrapper').width(),"*");
+                }, 100);
+               
+                $('#btn-external').on('click', function (event, element) {
+                    
+                    $('li.poi-item').first().find('.open_bubble')[0].click();
+                })
+
+                ace.util.Event.on("popup:loaded", function () {
+                    $('#bubble_hours').html($('#all_hours_table').html());
+                    $("#map form.bubble_form_2").on("submit", function (evt) {
+                        evt.preventDefault();
+                    });
+                    $('#map .bubble_form_2 .bubble_input')[0].focus();
+
+                    $('#map .bubble_form_2 .bubble_go2').on("click", function (event) {
+                        generate_directions($('#map .bubble_form_2 .bubble_input').val(), $('#map .bubble_form_2 .bubble_endaddress').val());
+                    });
+
+                });
+            });
+
+            function generate_directions (startaddress, endaddress) {
+
+                endaddress = endaddress.replace("#", "poundsign");
+
+                if (bubbleValidate(startaddress)) {
+                    $('#directions_url').data('url', '' + startaddress + '&addressline=' + '<TMPL_VAR NAME=latitude>,<TMPL_VAR NAME=longitude>' + '&addresslineDisplay=' + endaddress);
+                    ace.util.alertExternal($('#directions_url'));
+                    //$('#directions_url').click();
+                    //performClick($('#directions_url'));
+                }
+            }
+
+            function bubbleValidate (bubbleInput) {
+                if (bubbleInput.length > 0 && bubbleInput.length < 5 && !isNaN(bubbleInput)) {
+                    ace.util.alert("Please enter a valid ZIP code.");
+                    return false;
+                }
+
+                if (bubbleInput.length == 0) {
+                    ace.util.alert("Please enter a starting address.");
+                    return false;
+                }
+
+                return true;
+            }
+
+            function performClick (node) {
+                if ((navigator.userAgent.match(/Safari/i))) {
+                    var evObj = document.createEvent('MouseEvents');
+                    evObj.initMouseEvent('click', true, true, window);
+                    node.dispatchEvent(evObj);
+                } else {
+                    node.click();
+                }
+            }
+
+             $(document).ready(function(){
+                $(window).on('resize', function(){
+                    parent.postMessage("w2gi:iframeHeightUpdated" + "//" + $('#w2gi_wrapper').height() + "//" + $('#w2gi_wrapper').width(),"*");
+                });
+            });
+
+		</script>
+
+		<style>
+			.hidefirst0 {
+				display: none !important;
+			}
+			.hideit {
+				display: none;
+			}
+
+            .readjust {
+                margin-left:25%;
+            }
+
+             @media (min-width:601px){
+                .toptitle {
+                    font-size:50px !important;
+                }
+             }
+
+            @media (min-width:1px) and (max-width:601px) {
+                #magicalEvents img {
+                    height:50%;
+                    width:100%;
+                }
+                .readjust {
+                    margin-left:3% !important;
+                }
+            }
+		</style>
+
+<!-- <script type="text/javascript">
+
+ var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-20901095-1']);
+_gaq.push(['_setDomainName', 'disneystore.com']);
+_gaq.push(['_addIgnoredRef', 'disneystore.com']);
+_gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script> -->
+
+<style>
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px !important;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+</style>
+	</head>
+
+	<body>
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPTHD46"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+		<div id="templates" style="display: none;">
+			<script id="locator_addressline" type="text/x-handlebars-template">
+				{{#if address1}}{{address1}}{{else}}{{#if addressline}}{{addressline}}{{/if}}{{ city }} {{ county }} {{ state }} {{postalcode}}{{/if}}
+			</script>
+		   	<script id="directions_addressline" type="text/x-handlebars-template">
+                {{#if address1}}{{address1}} {{ city }} {{ state }} {{postalcode}} {{else}} {{#if addressline}}{{addressline}}{{/if}} {{ city }} {{ state }} {{postalcode}}{{/if}}
+            </script>
+			<script id="collection_multiple_address" type="text/x-handlebars-template">
+				<h3>Please select your location</h3>
+				<ul class="content-list address-suggestions">
+				{{#each this}}
+				<li data-id={{@index}}><strong>{{address1}} {{ city }} {{ county }}</strong>{{ state }} {{postalcode}}</li>
+				{{/each}}
+				</ul>
+			</script>
+
+			<!-- icon template start  -->
+			<script id="default" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com//images/bluePin.png" style="cursor:pointer;" alt=""/>
+                </div>
+            </script>
+            
+            <script id="RED" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com//images/bluePin.png" style="cursor:pointer;" alt=""/>
+                </div>
+            </script>
+            
+            
+            <script id="DISNEYSTORE" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img alt="" class="alpha" src="https://stores.shopdisney.com//images/bluePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="DISNEYBABY" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="46" data-height="45" data-offsetx="-23" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img alt="" class="alpha" src="https://stores.shopdisney.com//images/greenPin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="DISNEYOUTLET" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="50" data-height="46" data-offsetx="-25" data-offsety="-46" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img alt="" class="alpha" src="https://stores.shopdisney.com//images/orangePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="PLAYMATION" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="36" data-height="53" data-offsetx="-18" data-offsety="-53" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img alt="" class="alpha" src="https://stores.shopdisney.com//images/playmation/playmation_mapmarker.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+			
+			<script id="center_marker" type="text/x-handlebars-template">
+				<div class="icon" data-bubbleid="bubble" data-width="30" data-height="28"  data-offsetx="-11" data-offsety="-33">
+				<img class="alpha" alt="redstar" src="https://hosted.where2getit.com/w2gi/images/zoombar/blank.gif"/>
+				</div>
+			</script>
+			<script id="ddstarticon" type="text/x-handlebars-template">
+				<div class="end_icon" data-width="27" data-height="38" data-offsetx="-16" data-offsety="-28">
+				<img class="alpha" alt="start" src="https://stores.shopdisney.com//images/driving-directions-start-marker.png"/>
+				</div>
+			</script>
+			<script id="ddendicon" type="text/x-handlebars-template">
+				<div class="end_icon" data-width="33" data-height="40" data-offsetx="-17" data-offsety="-40">
+				<img class="alpha" alt="end" src="https://stores.shopdisney.com//images/driving-directions-end-marker.png"/>
+				</div>
+			</script>
+			<!-- icon template end -->
+
+			<script id="bubble" <tmpl_if name="is_wireless_device">data-offsetx="10" data-offsety="-15" data-width="200" data-height="150" <tmpl_else> data-offsetx="10" data-offsety="-70" data-width="303" data-height="240" </tmpl_if> type="text/x-handlebars-template">
+        	
+            
+                <ul class="tabs desktopOnly">
+                    <li class="active" data-tab="tab1">Address</li>
+                    <li data-tab="tab2">Hours</li>
+                    <li data-tab="tab3">Events</li>
+                </ul>
+                <div class="tab-content active" data-tab="tab1">
+                  	<a href="javascript: void(0);" onclick="grab('https://stores.disneystore.com/{{state2}}{{province2}}/{{city2}}/{{clientkey}}/?utm_source=Disney+Store&utm_medium=Website&utm_campaign=Store+Locator');" class="name">{{name}}</a>
+						
+                   <div class="hideit{{message3}}" style="color: #000000;">{{message3}}</div>
+                   <div class="hideit{{store_result_message}}" style="margin-top:3px; color:#ff0000">{{store_result_message}}</div>
+
+					{{address1}}<br />
+					<span class="hideit{{address2}}">{{address2}}<br/></span>
+					{{city}}, {{state}}{{province}} {{postalcode}}<br />
+					<span class="desktopPhone">Phone:{{phone}}</span>
+                            
+                    <span class="mobilePhone">Phone: <a href="javascript:void(0);" onclick="window.parent.location = 'tel:{{phone}}';" >{{phone}}</a></span>
+                           
+					
+				   <a href="javascript: void(0);" style="float:left; width:100%; margin-top:10px;" onclick="grab('https://stores.disneystore.com/{{state2}}{{province2}}/{{city2}}/{{clientkey}}/?utm_source=Disney+Store&utm_medium=Website&utm_campaign=Store+Locator');" class="mobileOnly name">View Details</a>
+				
+					<br/>
+					
+                    <span class="desktopOnly">Send Address To:  
+                    <a class="lightwindow" data-width="680" data-height="480" data-url="/lite?appkey=4E6D88C8-024F-11E6-8672-4E1F407E493E&action=emaillocatorstart&template=emaillocatorstart&uid={{uid}}" title="Send to Email" href="">Email</a> | 
+                    <a class="lightwindow" data-width="680" data-height="380" data-url="/lite?appkey=4E6D88C8-024F-11E6-8672-4E1F407E493E&action=smslocatorstart&template=smslocatorstart&uid={{uid}}" title="Send to Mobile" href="">Mobile</a>
+                    </span>
+                          
+                    <br style="clear: both;" />
+
+					<div class="desktopOnly" style="float:left; width:100%; margin-bottom:10px; margin-top: 10px;"><a target="_blank" onclick="window.open('//www.facebook.com/disneystore');" href="//www.facebook.com/disneystore"><img src="https://stores.shopdisney.com//images/facebook.png" alt="Facebook"/></a> <a target="_blank" onclick="window.open('//www.twitter.com/disneystore');" href="//www.twitter.com/disneystore"><img src="https://stores.shopdisney.com//images/twitter.png" alt="Twitter"/></a>  <a target="_blank" onclick="window.open('//www.pinterest.com/disneystore');" href="//www.pinterest.com/disneystore"><img src="https://stores.shopdisney.com//images/pinterest.png" alt="Pinterest"/></a></div> 
+
+
+				    <div class="desktopOnly hideit{{message}}" style="margin-top:3px; color: #FF0000;">{{message}}</div>
+					<div class="desktopOnly hideit{{message2}}" style="margin-top:3px; color: #FF0000;">{{message2}}</div>
+                      
+
+                    <div class="dd-wrapper desktopOnly" style="margin-top:10px;">
+                        <div class="origin-select hideit">
+                            <a href="#" data-action="to" class="">To here</a>|<a href="#" data-action="from">From here</a>
+                        </div>
+                        <form id="dd" autocomplete="off">
+                            <label for="bubbleinput" class="sr-only">From:</label> <br/>
+                            <input id="bubbleinput" size="19" type="text" name="addressline" value="{{addressline}}" class="search-box" style="width:150px; margin-bottom:3px;"/>
+                            
+                           <select id="bubble_country" name="country" class="select-box" style="display:none; width:180px; padding:8px 5px;">
+                           	
+                              <option value="">Select a country</option>
+                              {{#each options}}
+                                <option value="{{value}}" {{#if selected}}selected="selected"{{/if}}>{{text}}</option>
+                              {{/each}}
+                            
+                            </select>
+                            <input type="submit" value="Go" class="button-search"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-content" data-tab="tab2">
+                	
+                	<table style="font-size: 12px; margin-top:10px; line-height: 20px;">
+						<tr>
+							<td> Monday:</td> <td>{{mon_op}} - {{mon_cl}} </td>
+						</tr>
+						<tr>
+							<td> Tuesday:</td> <td> {{tue_op}} - {{tue_cl}}</td>
+						</tr>
+						<tr>
+							<td> Wednesday:</td> <td>{{wed_op}} - {{wed_cl}}</td>
+						</tr>
+						<tr>
+							<td> Thursday:</td> <td> {{thu_op}} - {{thu_cl}}</td>
+						</tr>
+						<tr>
+							<td> Friday:</td> <td> {{fri_op}} - {{fri_cl}}</td>
+						</tr>
+						<tr>
+							<td> Saturday:</td> <td> {{sat_op}} - {{sat_cl}}</td>
+						</tr>
+						<tr>
+							<td> Sunday:</td> <td> {{sun_op}} - {{sun_cl}}</td>
+						</tr>
+					</table>
+                	
+                </div>
+                <div class="tab-content" data-tab="tab3">
+                    <span style="color: #000000">{{eventheadline1}}</span><br />
+                    {{eventdescription1}}
+                    <br /><br />
+                    <span style="color: #000000">{{eventheadline2}}</span><br />
+                    {{eventdescription2}}
+                </div>
+            </script>
+            <!-- bubble template end -->
+
+			<!-- POI table template start -->
+			<script id="collection_poi" type="text/x-handlebars-template">
+
+				<ul class="content-list poi-result"> 
+
+				{{#each pois}}
+				<li data-id={{@index}} data-uid={{uid}} class="poi-item hidefirst{{@index}}" style="float: left; margin-right:10px; margin-bottom:10px;">
+
+				<div class="nearby_icon">
+				<span class="poinum"> 
+				<div>
+				<a data-action="open_bubble" style="cursor:pointer;color:#fff;">{{incIndex @index}}</a>
+				</div>
+				</span>
+				</div>
+
+				<div class="nearby_details">  
+				<div>
+				<span style="font-weight:bold;">{{name}}</span>
+				<a data-action="open_bubble" data-linktrack="view-on-map-click" class="open_bubble">View on map </a>
+
+				</div>
+
+				<div class="address1">
+				{{address1}}
+				</div>
+
+				<div class="address2">
+				{{city}}, {{state}}{{province}} {{postalcode}}
+				<br />
+				Phone: {{phone}}
+				</div>
+
+				</div>
+
+				</li>
+
+				{{/each}}
+				</ul>
+
+				
+			</script>
+			<!-- POI table template end -->
+
+			<!-- More Info table template start -->
+			<script id="collection_more_info" type="text/x-handlebars-template">
+				<table odd_row_class="odd" even_row_class="even" active_row_class="active" slice_size="5">
+				<thead>
+				<tr>
+				<td></td>
+				</tr>
+				</thead>
+				<tfoot>
+				<tr>
+				<td></td>
+				</tr>
+				</tfoot>
+				<tbody>
+				<tr recnum="#{POINUM}">
+				<td width="33px" valign="top">
+				<div templateid="#{ICON}"></div>
+				</td>
+				<td width="310px">
+				<a action="open_bubble" class="store_name" recnum="#{POINUM}" href="javascript:void(0);">#{NAME}</a>
+				<br/>
+				#{ADDRESS1}
+				<br/>
+				#{CITY}, #{STATE}#{PROVINCE} #{POSTALCODE}
+				<br/>
+				<strong>#{PHONE}</strong>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="2">
+				<a action="show_all" recnum="#{POINUM}" href="javascript:void(0);">Show All Locations</a>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+			</script>
+			<!-- More Info table template end -->
+
+			<!-- Ambiguous address table template start -->
+			<!--script id="collection_multiple_address" type="text/x-handlebars-template">
+				<table odd_row_class="odd" even_row_class="even" active_row_class="active">
+				<thead>
+				<tr>
+				<th>Did you mean:</th>
+				</tr>
+				</thead>
+				<tfoot>
+				<tr>
+				<td></td>
+				</tr>
+				</tfoot>
+				<tbody>
+				<tr recnum="#{POINUM}">
+				<td width="250px">
+				<a action="search_address" recnum="#{POINUM}" href="javascript:void(0);">#{ADDRESS1} #{CITY}, #{STATE}#{PROVINCE} #{POSTALCODE}</a>
+				<br/>
+				#{COUNTY}
+				</td>
+				</tr>
+				</tbody>
+				</table>
+			</script-->
+			<!-- Ambiguous address table template end -->
+
+			<!-- driving directions panel template end -->
+			<script id="collection_maneuvers" type="text/x-handlebars-template">
+				<p>
+				<a class="search_again" href="javascript:void(0);" target="_parent" onclick="window.location.reload()">Back to Store Details</a>
+				</p>
+				<p><strong>Distance: {{total_distance}} miles.         
+				<br/>Drive time: {{total_time}} minutes</strong></p>
+				
+				<p class="maneuver_start">
+				From (A): <strong>{{#if fromAddress.address1}}{{fromAddress.address1}}{{else}}{{#if fromAddress.addressline}}{{fromAddress.addressline}}{{/if}} {{ fromAddress.city }} {{ fromAddress.county }} {{ fromAddress.state }} {{fromAddress.postalcode}}{{/if}} </strong>
+				</p>
+				<ul class="content-list maneuver-result">
+				{{#each maneuverlist}}
+				<li data-id={{@index}} data-uid={{uid}}>
+				<strong>{{incIndex @index}} </strong>{{text}} {{distance}} {{distanceuom}}
+				</li>
+				{{/each}}
+				</ul>
+				<p class="maneuver_end">
+				To (B): <strong>{{#if toAddress.address1}}{{toAddress.address1}}{{else}}{{#if toAddress.addressline}}{{toAddress.addressline}}{{/if}} {{ toAddress.city }} {{ toAddress.county }} {{ toAddress.state }} {{toAddress.postalcode}}{{/if}} </strong>
+				</p>
+
+			</script>
+
+			<!-- Maneuvers table template end -->
+			<div id="lightwindow_cache" params="lightwindow_width=400, lightwindow_height=300, lightwindow_loading_animation=false">
+				<span id="lightwindow_cache_data" style="line-height: auto;
+				overflow: visible,
+				position: relative;float: left;width: 100%;"></span>
+			</div>
+		</div>
+		<!-- End Locator Map/POI List Templates -->
+
+    <div id="w2gi_wrapper">
+		<div data-w2gi="locator" id="w2gilocalmain" >
+
+			<div id="form">
+        <div id="poi" class="poi" style="display:none;"></div>
+        <div class="map" style="display:none;"></div>
+
+				<form id="locator_search" autocomplete="off"></form>
+				<form id="driving_directions" autocomplete="off" style="display: none;">
+
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									 <label for="startaddress" class="sr-only">From:</label>
+								</td>
+								<td>
+									<input class="addressentry" id="startaddress" type="text" size="28" name="addressline" value="Start address" onClick="clear_search_directions_box(this);"/>
+									<label for="endaddress" class="sr-only">To:</label>
+								</td>
+								<td>
+									<input class="addressentry" id="endaddress" type="text" size="28" name="addressline" value="End address" onClick="clear_search_directions_box(this);"/>
+									<input id="driving_directions_button" type="submit" value="Get Directions" name="driving_directions"/>
+								</td>
+								<td>
+									<a class="search_toggle" href="javascript:void(0);" style="font-size:12px;">Search Again</a>
+								</td>
+							</tr>
+
+							<!-- <tr><td colspan="3" style="text-align:right;"></td></tr> -->
+						</tbody>
+					</table>
+				</form>
+			</div>
+			<!-- end of form -->
+
+			
+			<section class="magic-moments">
+                <img src="/images/2021/Create-Magic-Moments.svg" alt="Create Magic Moments" />
+                <h2>Welcome fans and parents to a selection of free digital experiences suitable for the whole family!</h2>
+            </section>
+
+
+            <section class="events2">
+                <tmpl_if NAME="disneyevents">
+                    <ul id="events-gallery">
+                    <tmpl_loop NAME='disneyevents'>
+                        <tmpl_if clienteventId>
+                        <script>
+                            console.log('<tmpl_var name=name>//<tmpl_var name=clienteventId>');
+                        </script>
+                        <li>
+                            <tmpl_if NAME="imageurl">
+                                <tmpl_if NAME="eventurl">
+                                    <a href="javascript: void(0);" onclick="window.open('<TMPL_VAR NAME=eventurl>','_blank')" aria-label="Click to open in new window" class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">' data-linktrack='click_<tmpl_var name="name">'>
+                                        <img class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">' src="<TMPL_VAR NAME='imageurl'>"/>
+                                        <div class="events-li-inner">
+                                            <h3 class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">'><tmpl_var name="name"></h3>
+                                            <p class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">'><tmpl_var name="description"></p>
+                                        </div>
+                                    </a>
+                                <tmpl_else>
+                                    <img src="<TMPL_VAR NAME='imageurl'>"/>
+                                    <div class="events-li-inner">
+                                        <h3 class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">'><tmpl_var name="name"></h3>
+                                        <p class="ga_w2gi_loc" data-galoc='Events <tmpl_var name="name">' data-gaact='click_<tmpl_var name="name">'><tmpl_var name="description"></p>
+                                    </div>
+                                </tmpl_if>
+                            <tmpl_else>
+                                <img title="Disney" src="//hosted.where2stageit.com/disney/images/events/defaultbkgd.png" alt="Disney" />
+                                <div class="events-li-inner">
+                                <h3><tmpl_var name="name"></h3>
+                                <p><tmpl_var name="description"></p>
+                            </div>
+                            </tmpl_if>
+                            
+                        </li>
+                        </tmpl_if>
+                    </tmpl_loop>
+                    </ul>
+                <tmpl_else>
+                <style>
+                    section.events2 {
+                        height: 0;
+                        margin-bottom: 0;
+                    }
+                </style>
+                </tmpl_if>
+
+                
+            </section>
+
+        
+        
+      
+      </div> <!-- end of latestEvents -->
+			
+			<div class="overlay"></div>
+
+			<div class="modal">
+				<a href="#" class="closeBtn"></a>
+				<div id="lightwindow_title_bar" style="position:absolute; left:0px; top:0px; padding-top:2px; height:28px; width: 366px;">
+					<div id="lightwindow_title_bar_inner" style="">
+						<!-- <span id="lightwindow_title_bar_title">Send to Phone</span> -->
+					</div>
+				</div>
+				<div class="bottom_bar"></div>
+				<p></p>
+			</div>
+
+			<div class="footer" style="display: none;">
+
+				<div id="w2gifooter">
+			    	<script type="text/javascript">
+			
+						var d = new Date()
+			
+						document.write("<a href='http://www.brandify.com' target='_new'>Store Locator Software</a> Powered by Brandify ")
+			                            document.write("Copyright &copy; ")
+						document.write(d.getFullYear())
+			
+						document.write(", All Rights Reserved.<br/>")                		
+			
+					</script>
+			   
+			    </div>
+			    
+				<div id="navteqfooter" style="display: none;">
+					<script type="text/javascript">
+                        var d = new Date ()
+                        document.write(" <img alt='Navteq' src=/w2gi/images/logo_navteq_large.gif> ")
+                        document.write(" &copy; Copyright ")
+                        document.write(d.getFullYear())
+                        document.write(" NAVTEQ Corp.  ")
+					</script>
+					<a href="http://www.brandify.com/company/terms/" onClick="window.open(this.href,'_blank','width=988,height=600,scrollbars=yes,location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=yes');return false;">Use Subject to and Conditions</a>
+				</div>
+
+			</div>
+      <br class="clear">
+    
+		</div><!-- end w2gilocalmain  -->
+    <div style="clear:both"></div>
+    </div><!-- end of #w2gi_wrapper-->
+     <script>
+        function removeExtra() {
+          setTimeout(function() {
+            var subheaders = document.getElementsByClassName('ranknumber');
+            var readjustclass = document.getElementsByClassName('readjust');
+            if(readjustclass.length == 2) {
+              readjustclass[0].style.marginLeft ="0";
+              readjustclass[1].style.marginLeft ="0";
+            }
+            if (subheaders.length == 2) {
+              subheaders[1].style.display="none";
+            }
+          }, 500);
+        }
+
+        window.addEventListener('load', function(event) {
+            removeExtra(event);
+        }, false);
+    </script>
+    <script>
+            $(function(){
+                // $('.todays-hours').on('click',function(){
+                //  $(this).toggleClass('open');
+                //  $('.all-hours').slideToggle(300);
+                // })
+                var dotsCount;
+                if($('#gallery > div').length > 1) {
+                    dotsCount = true;
+                } else {
+                    dotsCount = false
+                }
+
+                $('#gallery').slick({  
+                  accessibility: true,  
+                  arrows: false,
+                  dots: dotsCount,
+                  // prevArrow:"<button class=\'slick-prev\'><span class=\'screen-reader-only\'>See Previous Slide</span>",    
+                  // nextArrow:"<button class=\'slick-next\'><span class=\'screen-reader-only\'>See Next Slide</span>",    
+                  speed: 300,
+                  infinite: true,
+                  slidesToScroll: 1,
+                  slidesToShow: 1
+                });
+
+          $('#events-gallery').slick({
+            accessibility: true,  
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            infinite: true,
+            nextArrow:"<button class=\'slick-next\'><img src='/images/2021/arrow-next.2.svg' alt='Click to next slide'>See Next Slide</span>",
+            prevArrow:"<button class=\'slick-prev\'><img src='/images/2021/arrow-prev.2.svg' alt='Click to prev slide'></span>",
+            
+            slide: 'li',
+            slidesToShow: 3,
+            responsive: [
+              {
+                breakpoint: 1240,
+                settings: {
+                slidesToShow: 2,
+                }
+              },
+              {
+                breakpoint: 840,
+                settings: {
+                    nextArrow:"<button class=\'slick-next\'><img src='/images/2021/arrow-next.m.svg' alt='Click to next slide'>See Next Slide</span>",
+                    prevArrow:"<button class=\'slick-prev\'><img src='/images/2021/arrow-prev.m.svg' alt='Click to prev slide'></span>",
+                    slidesToShow: 1,
+                }
+              }
+            ]
+            });
+            });
+        </script>
+	</body>
+</html>

@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- BHODATA = 'Mon $mon_op-$mon_cl, Tue $tue_op-$tue_cl, Wed $wed_op-$wed_cl, Thu $thu_op-$thu_cl, Fri $fri_op-$fri_cl, Sat $sat_op-$sat_cl, Sun $sun_op-$sun_cl'; -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name='format-detection' content='telephone=no' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Toys, Accessories & More in <TMPL_VAR  NAME="city"> | <TMPL_VAR  NAME="postalcode">
+  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Disney merchandise including toys, clothing, theme park merchandise, costumes and more. Located at <TMPL_VAR  NAME="address1"> <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state">, <TMPL_VAR  NAME="postalcode">" />
+
+<link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>       
+
+<link rel="canonical" href="<TMPL_VAR NAME='cityindex_url'><TMPL_VAR  NAME='clientkey'>/" />
+<link rel="icon" type="image/x-icon" href="https://static-mh.content.disney.io/catalog/assets/favicon-94e3862e7fb9.ico" />
+
+<!-- Non-Restaurant Set -->
+<meta property="fb:app_id" content="183105655051548" />
+<meta property="og:type" content="business.business" />
+<meta property="og:url" content="<TMPL_VAR NAME='cityindex_url'><TMPL_VAR NAME='clientkey'>" />
+<meta property="og:title" content="<TMPL_VAR NAME='name'>" />
+<meta property="og:description" content="Official page for Maps and Information for Disney Store <TMPL_VAR  NAME="city">, <TMPL_VAR NAME="state"><TMPL_VAR NAME="province"> location." />
+<meta property="og:image" content="https://cdn-ssl.img.shopdisney.com/content/global/w2gi/ds.jpg" />
+<meta property="business:contact_data:street_address" content="<TMPL_VAR NAME='address1_pc'>" />
+<meta property="business:contact_data:locality" content="<TMPL_VAR NAME='city_pc'>" />
+<meta property="business:contact_data:region" content="<TMPL_VAR NAME='state'>" />
+<meta property="business:contact_data:postal_code" content="<TMPL_VAR NAME='postalcode'>" />
+<meta property="business:contact_data:country_name" content="<TMPL_VAR NAME='country'>" />
+<meta property="business:contact_data:phone_number" content="<TMPL_VAR NAME='phone'>" />
+<meta property="business:contact_data:website" content="<TMPL_VAR NAME='cityindex_url'><TMPL_VAR NAME='clientkey'>" />
+<meta property="place:location:latitude" content="<TMPL_VAR NAME='latitude'>" />
+<meta property="place:location:longitude" content="<TMPL_VAR NAME='longitude'>" />
+
+
+    <link type="text/css" href="/w2gi/css/style.css" rel="stylesheet" media="all"/>
+    
+  <link rel="stylesheet" type="text/css" href="//hosted.where2getit.com/disney/css/disney-responsive.local.ADA.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet"> 
+
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "<TMPL_VAR NAME='topindex_url_lc'>",
+            "name": "Index"
+          }
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "<TMPL_VAR NAME='stateindex_url_lc'>",
+            "name": "<TMPL_VAR NAME='state'>"
+          }
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "<TMPL_VAR NAME='cityindex_url_lc'>",
+            "name": "<TMPL_VAR NAME='city'>"
+          }
+        }]
+      }
+      </script>
+
+      <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ToyStore",
+      "@id":"<TMPL_VAR NAME='cityindex_url'><TMPL_VAR NAME='clientkey'>/",
+      "name": "Disney Store",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"<TMPL_VAR NAME='address1'>",
+        "addressLocality":"<TMPL_VAR NAME='city'>",
+        "addressRegion":"<TMPL_VAR NAME='state'>",
+        "postalCode":"<TMPL_VAR NAME='postalcode'>",
+        "addressCountry":"<TMPL_VAR NAME='country'>"
+    },
+    "containedIn":"<TMPL_VAR NAME='StoreName'>",  
+    "geo":{
+        "@type":"GeoCoordinates",
+        "latitude":<TMPL_VAR NAME='latitude'>,
+        "longitude":<TMPL_VAR NAME='longitude'>
+      },
+    "branchOf": {
+        "name":"Disney Store",
+        "url": "https://www.shopdisney.com/"
+      },
+     "url":"<TMPL_VAR NAME='cityindex_url'><TMPL_VAR NAME='clientkey'>/",
+      "telephone":"<TMPL_VAR NAME="phone">",
+      "logo" : "https://stores.shopdisney.com/images/local/disney-logo.png",
+      <tmpl_if expr="(storetype eq 'P30')">
+      "image" : "https://stores.shopdisney.com/images/sDDs-P30-Store.jpg",
+      <tmpl_else>
+      <TMPL_IF NAME="storeimageurl">
+      "image" : "<TMPL_VAR NAME='storeimageurl'>",
+      <TMPL_ELSE>
+      "image" : "https://cdn-ssl.img.shopdisney.com/content/ds/skyway/2015/freeform/storeLocator/ds-baby-americana.jpg",
+      </tmpl_if>
+      </tmpl_if>
+      "openingHoursSpecification":[
+        {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Monday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_MON_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_MON_CLOSED">"
+        },
+        {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Tuesday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_TUE_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_TUE_CLOSED">"
+        },
+        {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Wednesday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_WED_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_WED_CLOSED">"
+        },
+        {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Thursday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_THU_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_THU_CLOSED">"
+        },
+            {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Friday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_FRI_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_FRI_CLOSED">"
+        },    {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Saturday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_SAT_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_SAT_CLOSED">"
+        },
+            {
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":[
+            "Sunday"
+          ],
+          "opens":"<TMPL_VAR NAME="BHO_SUN_OPEN">",
+          "closes":"<TMPL_VAR NAME="BHO_SUN_CLOSED">"
+        }
+      ]
+    }
+  </script> 
+  
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "SpecialAnnouncement",
+        "name": "Disney COVID-19 Announcement",
+        "text": "<TMPL_VAR NAME='specialnotes'>",
+        "datePublished": "2020-03-18",
+        "about" : {
+          "@type": "ToyStore",
+          "name": "<tmpl_var name=name>, <TMPL_VAR NAME='address1'> <tmpl_var name="city_pc">, <tmpl_var name="state">",    
+          "url": "<TMPL_VAR NAME='cityindex_url'><TMPL_VAR  NAME='clientkey'>/",
+            <TMPL_IF NAME="storeimageurl">
+              "image" : "<TMPL_VAR NAME='storeimageurl'>",
+              <TMPL_ELSE>
+              "image" : "https://cdn-ssl.img.shopdisney.com/content/ds/skyway/2015/freeform/storeLocator/ds-baby-americana.jpg",
+              </tmpl_if>
+          "telephone":"<TMPL_VAR NAME="phone">",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress":"<TMPL_VAR NAME='address1'>",
+            "addressLocality":"<TMPL_VAR NAME='city'>",
+            "addressRegion":"<TMPL_VAR NAME='state'>",
+            "postalCode":"<TMPL_VAR NAME='postalcode'>",
+            "addressCountry":"<TMPL_VAR NAME='country'>"
+          }
+        }
+      }
+      </script>
+
+    <script type="text/javascript" src="/w2gi/javascript/backbone/bb/lib/jquery.js"></script>
+    <script>
+            var W2GI = {
+                collection : {},
+                config : {
+                    appkey : '<TMPL_VAR NAME="appkey">',
+                    pageObserve : ['linktrack'],
+                    autoStart : true,
+                    locator : {
+                        cgeo : false,
+                        theme : null,
+                        cdirections : false,
+                        formdata : {
+                            geoip : true,
+                            dataview : 'store_default',
+                            limit : 250,
+                            geolocs : {
+                                geoloc : [{
+                                    addressline : '',
+                                    country : '',
+                                    latitude : '',
+                                    longitude : ''
+                                }]
+                            },
+                            searchradius : '20|50|75|100|500'
+                        },
+                        drivingdirections : {
+                            disableDynamicRoutes : false,
+                            formdata : {
+                                dataview : 'store_default',
+                                geolocs : {
+                                    geoloc : [{
+                                        address1 : '',
+                                        city : '',
+                                        state : '',
+                                        province : '',
+                                        postalcode : '',
+                                        addressline : '',
+                                        country : '',
+                                        latitude : '',
+                                        longitude : ''
+                                    }]
+                                }
+                            }
+                        },
+                        imgPath : 'https://hosted.where2getit.com/disney/images/zoom2017/',
+                        controls : [{
+                            name : 'panZoom', // use panZoomBar if needs the full
+                            // bar
+                            options : {
+                                zoomWheelEnabled : false
+                            }
+                        }],
+                        //noZoomOnPan: true,
+                        //zoom: 15,
+                        dynamicSearch : false,
+                        routeStyle : {
+                            strokeWidth : 8,
+                            strokeOpacity : 0.5,
+                            strokeColor : '#0000FF'
+                        },
+                      sources: [                       
+                               { 
+                                   name: 'Google Normal',
+                                       options: {
+                                       disableDoubleClickZoom : true,
+                                       displayName : 'Map',
+                                       projection: 'EPSG:900913', 
+                                       units: 'm', 
+                                       type: 'roadmap', 
+                                       maxZoomLevel:18
+                                      
+                                   }
+                               }
+
+                           ]
+
+                    }
+                }
+            };
+            
+            
+             /* custom ob */
+
+
+
+            var date = new Date();
+            var today = date.getDay();
+            
+            setTimeout(function() {
+         
+                    var d = new Date();
+                    var n = d.getDay();
+
+                    switch(n) {
+                        case 0:
+                            $('html').addClass("sunday");
+                            break;f
+                        case 1:
+                            $('html').addClass("monday");
+                            break;
+                        case 2:
+                            $('html').addClass("tuesday");
+                            break;
+                        case 3:
+                            $('html').addClass("wednesday");
+                            break;
+                        case 4:
+                            $('html').addClass("thursday");
+                            break;
+                        case 5:
+                            $('html').addClass("friday");
+                            break;
+                        case 6:
+                            $('html').addClass("saturday");
+                            break;
+                      }
+
+                }, 1000);
+
+
+            /* custom ob end here */
+           
+           
+            W2GI.collection.poi = [
+            <tmpl_if name="pois">
+            <tmpl_loop name = "pois" > {
+                poinum : '<TMPL_VAR ESCAPE=HTML NAME="poinum">',
+                icon : '<TMPL_VAR ESCAPE=HTML NAME="icon">',
+                org_icon : '<TMPL_VAR ESCAPE=HTML NAME="org_icon">',
+                name : '<TMPL_VAR ESCAPE=HTML NAME="name">',
+                address1 : '<TMPL_VAR ESCAPE=HTML NAME="address1">',
+                address2 : '<TMPL_VAR ESCAPE=HTML NAME="address2">',
+                city : '<TMPL_VAR ESCAPE=HTML NAME="city">',
+                state : '<TMPL_VAR ESCAPE=HTML NAME="state">',
+                province : '<TMPL_VAR ESCAPE=HTML NAME="province">',
+                postalcode : '<TMPL_VAR ESCAPE=HTML NAME="postalcode">',
+                country : '<TMPL_VAR ESCAPE=HTML NAME="country">',
+                latitude : '<TMPL_VAR ESCAPE=HTML NAME="latitude">',
+                longitude : '<TMPL_VAR ESCAPE=HTML NAME="longitude">',
+                phone : '<TMPL_VAR ESCAPE=HTML NAME="phone">',                
+                clientkey : '<TMPL_VAR ESCAPE=HTML NAME="clientkey">',
+                uid : '<TMPL_VAR ESCAPE=HTML NAME="uid">',
+                main_loc : '<TMPL_VAR ESCAPE=HTML NAME="main_loc">',
+                loc_url : '<TMPL_VAR ESCAPE=HTML NAME="loc_url">'
+            } <tmpl_unless name="__last__">,</tmpl_unless></tmpl_loop>
+            <tmpl_else> 
+            {
+            poinum : '<TMPL_VAR ESCAPE=HTML NAME="poinum">',
+            icon : '<TMPL_VAR ESCAPE=HTML NAME="icon">',
+            org_icon : '<TMPL_VAR ESCAPE=HTML NAME="org_icon">',
+            name : '<TMPL_VAR ESCAPE=HTML NAME="name">',
+            address1 : '<TMPL_VAR ESCAPE=HTML NAME="address1">',
+            address2 : '<TMPL_VAR ESCAPE=HTML NAME="address2">',
+            city : '<TMPL_VAR ESCAPE=HTML NAME="city">',
+            state : '<TMPL_VAR ESCAPE=HTML NAME="state">',
+            province : '<TMPL_VAR ESCAPE=HTML NAME="province">',
+            postalcode : '<TMPL_VAR ESCAPE=HTML NAME="postalcode">',
+            country : '<TMPL_VAR ESCAPE=HTML NAME="country">',
+            latitude : '<TMPL_VAR ESCAPE=HTML NAME="latitude">',
+            longitude : '<TMPL_VAR ESCAPE=HTML NAME="longitude">',
+            phone : '<TMPL_VAR ESCAPE=HTML NAME="phone">',            
+            clientkey : '<TMPL_VAR ESCAPE=HTML NAME="clientkey">',
+            uid : '<TMPL_VAR ESCAPE=HTML NAME="uid">',
+            main_loc : '<TMPL_VAR ESCAPE=HTML NAME="main_loc">',
+            loc_url : '<TMPL_VAR ESCAPE=HTML NAME="loc_url">'
+            }
+            </tmpl_if>
+            ]
+
+  for (var index = 0; index < W2GI.collection.poi.length; index++) {
+             //W2GI.collection.poi[index].icon = W2GI.collection.poi[index].org_icon; <!-- needs to enable this line when pushed to production. This is for showing the original map icon instead of the default main location. -->
+
+
+              W2GI.collection.poi[index].name = W2GI.collection.poi[index].name.replace(" & ", "&");
+              //console.log(W2GI.collection.poi[index].name);
+
+              //W2GI.collection.poi[index].subname = W2GI.collection.poi[index].subname.replace(" & ", "&");
+              //console.log(W2GI.collection.poi[index].icon);
+
+            }
+
+    </script>
+    <script data-main="/w2gi/javascript/backbone/bb/dist/bones.min" src="/w2gi/javascript/backbone/bb/lib/require.js"></script>
+    <script type="text/javascript">
+            //document.observe('w2gi:bubbleOpen', function() {
+            jQuery(document).on("w2gi:locatorloaded", function () {
+                //console.log("loaded");
+
+               
+                $('#btn-external').on('click', function (event, element) {
+                    
+                    $('li.poi-item').first().find('.open_bubble')[0].click();
+                })
+
+                ace.util.Event.on("popup:loaded", function () {
+                    $('#bubble_hours').html($('#all_hours_table').html());
+                    $("#map form.bubble_form_2").on("submit", function (evt) {
+                        evt.preventDefault();
+                    });
+                    $('#map .bubble_form_2 .bubble_input')[0].focus();
+
+                    $('#map .bubble_form_2 .bubble_go2').on("click", function (event) {
+                        generate_directions($('#map .bubble_form_2 .bubble_input').val(), $('#map .bubble_form_2 .bubble_endaddress').val());
+                    });
+
+                });
+            });
+
+            function generate_directions (startaddress, endaddress) {
+
+                endaddress = endaddress.replace("#", "poundsign");
+
+                if (bubbleValidate(startaddress)) {
+                    $('#directions_url').data('url', '' + startaddress + '&addressline=' + '<TMPL_VAR NAME=latitude>,<TMPL_VAR NAME=longitude>' + '&addresslineDisplay=' + endaddress);
+                    ace.util.alertExternal($('#directions_url'));
+                    //$('#directions_url').click();
+                    //performClick($('#directions_url'));
+                }
+            }
+
+            function bubbleValidate (bubbleInput) {
+                if (bubbleInput.length > 0 && bubbleInput.length < 5 && !isNaN(bubbleInput)) {
+                    ace.util.alert("Please enter a valid ZIP code.");
+                    return false;
+                }
+
+                if (bubbleInput.length == 0) {
+                    ace.util.alert("Please enter a starting address.");
+                    return false;
+                }
+
+                return true;
+            }
+
+            function performClick (node) {
+                if ((navigator.userAgent.match(/Safari/i))) {
+                    var evObj = document.createEvent('MouseEvents');
+                    evObj.initMouseEvent('click', true, true, window);
+                    node.dispatchEvent(evObj);
+                } else {
+                    node.click();
+                }
+            }
+
+    </script>
+
+    <style>
+      .hidefirst0 {
+        display: none !important;
+      }
+      .hideit {
+        display: none;
+      }
+
+.toggleCA {
+  display:none;
+}
+
+  .mymodaloverlay {
+            background-color: rgba(0,0,0,.55);
+            display: none;
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+          }
+          .mymodal {
+            background-color: #fff;
+            display: none;
+            height: 335px;
+            left: 50%;
+            max-width: 394px;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 90%;
+            z-index: 20;
+
+          }
+          .mymodal h3 {
+            font-size: 1.3125rem;
+            font-weight: 300;
+            letter-spacing: .025em;
+            margin-top: 41px;
+            position: relative;
+          }
+
+          .mymodal h3:after {
+            border-bottom: 1px solid #dee2e6;
+            content: "";
+            display: block;
+            margin: 5px auto 0;
+            width: 85%;
+          }
+
+          .mymodal p {
+            color: #6d7b8a;
+            font-weight: 300;
+            width: 85%;
+            margin: 0 auto;
+          }
+
+          .mymodal a.modalClose {
+            color: #6a7888;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 20px;
+            text-decoration: none;
+            top: 12px;
+          }
+
+          /*.mymodal a.modalClose:before {}*/
+
+          .mymodal a.modalLink {
+            background: #0795e6;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            height: 54px;
+            line-height: 54px;
+            margin: 13px auto 0;
+            text-align: center;
+            text-decoration: none;
+            width: 265px;
+          }
+
+          .mymodal a.modalLink:hover {
+            background: #0685cd;
+          } 
+
+          .addressBlock {
+            box-sizing: border-box;
+          }
+    </style>
+
+
+<style>
+  .eventHead {
+      font-size: 45px;
+      text-align: center;
+      color: #fff;
+      font-weight: normal;
+  }
+  .toptitle {
+        font-weight:normal;
+      }
+  .closeBtn {
+      background: url('/images/close-icon.png') no-repeat;
+      width: 16px;
+      height: 16px;
+    }
+
+    .fullwidth img {
+        width: 100%;
+    }
+
+    .desktopOnly img{
+      width: auto !important;
+    }
+
+    .readjust {
+                margin-left:25%;
+    }
+
+     @media (min-width:601px){
+        .toptitle {
+            font-size:50px !important;
+        }
+     }
+
+    @media (min-width:1px) and (max-width:601px) {
+        #magicalEvents img {
+            height:50%;
+            width:100%;
+        }
+        .readjust {
+            margin-left:3% !important;
+        }
+    }
+    
+    .nav-logo-image {
+      width: 100%;
+      height: 42px;
+      fill: #002f65;
+    }
+  
+   div .covid-wrap {
+    margin-bottom: 30px;
+   }
+
+
+  div.covid-wrap a img, div.covid-wrap img {
+    max-width: 100%;
+  }
+
+  div.limiteddisney {
+    margin-bottom: 20px;
+  }
+  div.limiteddisney > img {
+    max-width: 100%;
+  }
+
+  div.funWith {
+    width: 100%;
+    height: 320px;
+    background: url(//stores.shopdisney.com/images/local/lp_fwd-athome_20200403.jpg) no-repeat;
+    margin-bottom: 20px;
+    background-size: cover;
+    font-family: 'Kalam', cursive;
+  }
+
+  .funWith_text {
+    width: 52%;
+    margin: 0px auto;
+  }
+
+  div.birthday {
+    width: 100%;
+    height: 400px;
+    background: url(//stores.shopdisney.com/images/local/tb_instorecelebration_20190712_r2.jpg) no-repeat;
+    margin-bottom: 20px;
+    background-size: cover;
+    font-family: 'Kalam', cursive;
+  }
+
+  .birthday_text {
+    /*width: 50%;*/
+    width: 60%;
+    margin: 0px auto;
+    margin-left: 30%;
+  }
+
+  @media (min-width:1px) and (max-width:601px) {
+    div.funWith {
+      height:auto;
+    }
+
+    .funWith_text {
+      width: 54%;
+      margin-right:12px;
+    }
+
+    div.funWith h3 {
+      padding-top:125px !important;;
+    }
+    div.birthday h3 {
+      /*padding: 5px 0px 0px!important;*/
+       padding: 18px 0px 0px!important;
+      font-size: 25px!important;
+      line-height: 28px;
+    }
+    div.birthday p {
+      width: 80%!important;
+    }
+
+    div.birthday {
+      height: 265px!important; 
+    }
+     div.birthday p, div.birthday p a {
+      font-size: 16px!important;
+      line-height: 20px!important;
+      margin:5px auto!important;
+      padding:5px 0px!important;
+     }
+
+  }
+
+  div.birthday h3 {
+    color: #fff;
+    font-size: 30px;
+    width:85%;
+    text-align: center;
+    /*padding: 70px 0px 0px;*/
+    padding:15% 0px 0px;
+    margin:10px auto;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  div.birthday p {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0px;
+    width:90%;
+    margin:10px auto;
+    font-family: 'Kalam', cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  div.birthday p a {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  div.funWith h3 {
+    color: #fff;
+    font-size: 30px;
+    width:85%;
+    text-align: center;
+    padding: 80px 0px 0px;
+    margin:10px auto;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  div.funWith p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0px;
+    width:100%;
+    margin:10px auto;
+    font-family: 'Kalam', cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  div.funWith p a {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Kalam', cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  @media (min-width:601px) and (max-width:810px) {
+    div.funWith p {
+      width: 90%;
+    }
+    .birthday_text {
+      margin-right: 0;
+      margin-left: auto;
+    }
+    div.funWith h3 {
+      padding: 40px 0px 0px;
+    }
+    .funWith_text {
+      margin-left: auto;
+      margin-right: 0;
+      width: 60%;
+    }
+  }
+
+  @media (min-width:1px) and (max-width:601px) {
+    div.funWith {
+      height:auto;
+    }
+
+    .funWith_text {
+      width: 54%;
+      margin-right:12px;
+    }
+
+    div.funWith h3 {
+      padding-top:125px !important;
+    }
+    div.birthday h3 {
+      /*padding: 5px 0px 0px!important;*/
+       padding: 18px 0px 0px!important;
+      font-size: 25px!important;
+      line-height: 28px;
+    }
+    .birthday_text { 
+      /*margin-left: 52%!important;*/
+      margin-left: 45%;
+    }
+    div.birthday p {
+      width: 80%!important;
+    }
+
+    div.birthday {
+      height: 265px!important; 
+    }
+     div.birthday p, div.birthday p a {
+      font-size: 16px!important;
+      line-height: 20px!important;
+      margin:5px auto!important;
+      padding:5px 0px!important;
+     }
+
+  }
+
+  @media (min-width:1px) and (max-width:400px) {
+    .funWith_text {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+      padding-bottom: 10px;
+    }
+    div.birthday {
+      background-position-x: calc(100% + 265px);
+    } 
+    .birthday_text { 
+    margin: 0 auto;
+    text-align: right;
+    margin-right: 0;
+    min-width: 250px;
+    }
+    div.funWith p {
+    padding: 5px 0px;
+    margin: 5px auto;
+    line-height: 22px;
+    }
+  }
+
+  /* for video pop up */
+
+  #closer_videopopup{
+    position: absolute;
+    display: table-cell;
+    right: 2%;
+    top: 2%;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    cursor: default;
+    background: none;
+    border: none;
+    color: #ffffff;
+
+
+    z-index: 100004;
+}
+#opct{
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.90;
+    opacity: 0.9;
+}
+#videCont{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: auto;
+    max-width: 720px;
+    height: 0;
+    height: auto !important;
+}
+#yt_video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+/*iframe{
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+}*/
+video{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    opacity: 1 !important;
+
+}
+#video1{
+    cursor: pointer; cursor: hand;
+}
+
+
+
+</style>
+
+
+<script src="https://global.go.com/stat/dolWebAnalytics.js"></script>
+<script>
+ var cto = new CTO();
+cto.account="wdgwdprosdweb, matterhorn";
+cto.fullPageName="dshop:sd:us:en:brandify:<tmpl_var name='clientkey'>"; //Replace XXXX with a unique identifier for the page
+cto.breadcrumbs="dsi:brandify";
+cto.contentType="sectionPage";
+cto.siteLevel2="dsi:brandify";
+cto.siteLevel3="dsi:brandify";
+cto.categoryCode="dsi:brandify";
+cto.productAvailability="dsi:brandify";
+cto.engagementId="dsi:brandify";
+cto.merchandising_category="dsi > brandify";
+cto.merchandising_category1="dsi > brandify";
+cto.merchandising_category2="dsi > brandify";
+cto.merchandising_category3="dsi > brandify";
+cto.merchandising_category4="dsi > brandify";
+cto.merchandising_category5="dsi > brandify";
+cto.merchandising_category6="dsi > brandify";
+cto.server="www.shopdisney.com";
+cto.trackPage();
+</script>
+
+  </head>
+
+  <body>
+    <tmpl_if expr="''">
+        <h1> rendered true</h1>
+      <tmpl_else>
+        <h1> rendered false</h1>
+    </tmpl_if>
+     <div class="mymodaloverlay"></div>
+    <div class="mymodal" tabindex="0">
+        <a href="javascript:void(0);" role="button" class="modalClose">&times;</a>
+        <h3>You Are Getting Redirected</h3>
+        <p>
+          The event registration website linked to here is not controlled by The Walt Disney Company and different terms of use and separate privacy policy will apply.
+        </p>
+        <a href="javascript:void(0);" role="button" class="modalLink" data-linktrack="Continue to Event Registration clicked for <tmpl_var name=clientkey>" target="_blank">Continue</a>
+    </div>
+<!-- <div class="mymodaloverlay"></div>
+    <div class="mymodal">
+        
+        <a href="javascript:void(0);" role="button" class="modalLink" onclick="setTimeout(function(){$('.modalClose').click();}, 200);">Close</a>
+    </div>  -->
+    <!-- <div>
+      <img src ="https://static-mh.content.disney.io/catalog/assets/logos/shop_logo-e0d7a7c88833.svg" style ="position: absolute;
+      width: 144px; height: 62px; top: 5px; left: calc(50% - 72px);">
+    </div> -->
+    <header>
+      <div class="skip-nav">
+        <a href="#w2gilocalmain" class="sr-only sr-only-focusable btn btn-primary" tabindex="1">Skip to main Content</a>
+      </div>  
+      <nav>
+        <ul class="desktop-nav">
+          <li>
+            <a href="https://www.shopdisney.com/" target="_self"><image src="https://stores.shopdisney.com/images/local/icon-arrow.png"> Continue Shopping</a>
+            </li>
+          <li><a href="https://help.shopdisney.com/hc/en-us" target="_self"><span>|</span>Guest Services</a>
+          </li>
+        </ul>
+        <!-- <ul class="mobile-nav">
+          <li><a href="https://www.disneystore.com/" target="_self"><image src="/images/local/icon-arrow.png"></a></li>
+        </ul> -->
+      </nav>
+      <a class="nav-logo" href="https://www.shopdisney.com/" target="_self">
+        <svg class="nav-logo-image" tabindex="-1">
+            <title>shopDisney Logo</title>
+            <use xlink:href="#icon-logo">
+            <svg id="icon-logo" width="100%" height="100%" viewBox="0 0 319.96 93.04">
+            <title>shopDisney Logo</title>
+            
+            <path class="cls-1" d="M256.1,156.3s-28.1-15.5-51.8-8.1a4,4,0,0,0-2.9,1.9c-1.4,1.9-2.6,3.2-2,4.7s4.3,2.2,7.5,1.3c0,0,1.5-.9-0.3-1.6a12,12,0,0,0-2.8-.8s-1-.3,0-0.7,11.8-3.5,30.6,1.9,44,21.5,42.8,37.4-26.1,15.9-26.1,15.9a57.26,57.26,0,0,1-12-1.4c0-5.2,0-14,.2-19.4,6,0.4,18.6,1.5,20.2,4.5,0,0,.8.8-1.8,2.1-1.9,1.1-3.6,1.5-1.9,2.4,0,0,2.5,1.5,3.9,1.1s5.5-1.8,6-6-4.6-8.5-11.9-10c-5.7-1.1-8.8-1.7-14-1.6,0.1-4.7-.4-10.6-1.4-12.1-1.3-1.9-2.7-4.3-3.8-1.7-1.1,2.4-2,7.4-2.4,14.3-8.1,1.1-17,4.2-19.7,7.5a5.22,5.22,0,0,0,0,7c0.2,0.3,5.8,9,18.3,15,0.1,2.3.5,4.8,1.4,6.2,1.9,3,5.4,1,6,.5,0.4-.3.7-1.3,0.8-3.5a51.81,51.81,0,0,0,26.8.5c16.7-4.5,19.3-14.7,19.9-20.8C286.6,186.6,282.5,170.5,256.1,156.3ZM239.5,187h0Zm-8.4,17.3A40.71,40.71,0,0,1,214.4,193s-1.8-2,.9-3.1c2.5-1,7.7-2.4,16.9-2.8C232.1,189.9,231.8,195.9,231.1,204.3Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M298.9,176.1c6.7-2.1,13.3-8.4,13.5-13.6s-5.6-5.3-5.6-5.3h-0.1c-0.9-3.3-7-3-7-3-12.4.7-16.7,9.1-17.3,11.4a7.08,7.08,0,0,0,2,7.1,3.74,3.74,0,0,0-.1,3.2c0.2,0.6,1.3,2.5,2.5,2.4,0.9-.1,1.5-0.6,2.6-2.5C291.7,176.9,294.7,177.4,298.9,176.1Zm5.9-14.7c4.5-.6,2.7,3.6,2.7,3.6-3.6,6.9-11.4,7-15.7,6.1C294.7,166.9,300.9,161.9,304.8,161.4Zm-18,6.9c-0.5-.9-0.4-2.1.9-4.1a9,9,0,0,1,7.3-4A32.94,32.94,0,0,0,286.8,168.3Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M295.8,198.8s-0.1-10.2-.3-12.3a6.54,6.54,0,0,0-1.5-4.1c-0.6-.9-1.5-2.2-3.1-0.9s-1.9,9.7-2.3,16.5-0.1,11,.7,12.2,4,1.8,5.4.7,1-11,1-11v-1.1h0.1Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M329.7,183.4c-2.1-2.5-14.1-2.4-14.1-2.4-4.4.2-14.7,1.8-16.1,6.3s-0.3,6-.3,6c1.2,2.3,9.8,2.4,12.2,2.6s8.6,1.2,10.8,2.4,0.6,2.9.6,2.9c-2.1,3-13.7,3.3-13.7,3.3s-4.1-.1-5.2-0.9-1.4-1.6-.2-3,4.3,0.2,4.3.2a12.33,12.33,0,0,0,5.9,2c3.4,0.2,5.9-1,6-2.2s-2.9-2.4-2.9-2.4c-10.1-3.1-14.3-.8-14.3-0.8-5.6,3.4-1.6,8.1-1.6,8.1,8.8,9.9,22.9,4,24.6,2.7s2.3-2.8,2.5-6.7-1.5-5.8-1.5-5.8c-2.8-3.7-11-3.9-13.3-4.1s-6.9-.9-8.1-1.1a0.6,0.6,0,0,1-.3-1.1c1.5-1.1,12.5-1.7,18.4-1.9l3.3-.3a3.26,3.26,0,0,0,2.9-2.4A1.51,1.51,0,0,0,329.7,183.4Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M347.5,177.6a1.18,1.18,0,0,0-1.7.7,5.38,5.38,0,0,0,0,2.7,110.27,110.27,0,0,1,3.5,17.9s0.1,1.9-.2,2.1a0.5,0.5,0,0,1-.6-0.1c-0.3-.1-3.8-6.2-3.8-6.2l-0.6-1.1c-3.9-6.6-6.1-8.8-6.1-8.8-0.6-.5-2-2-3.9-0.1s-3.4,8.4-4.1,14.4-0.4,9.5.5,11a2.9,2.9,0,0,0,4.4.8c1.6-1.2,1.6-9.2,2-13.3s0.7-3.4.7-3.4c0.4,0,2.1,3.8,2.1,3.8s4.7,10.2,7.7,11.8,5.7-.8,6.7-3,2.9-9.7.7-18.1S347.5,177.6,347.5,177.6Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M379,207.4c0.4-1.4-1-3.3-2.3-3.7-1.1-.3-10.6,1.2-11.8,1.4s-0.6-.8-0.6-0.8l1.6-4.8s8.9-.1,10.2-0.3a1.36,1.36,0,0,0,1.3-1,14.35,14.35,0,0,0,.1-2.7,1.21,1.21,0,0,0-1.2-1.3,54.94,54.94,0,0,0-8.1-.1l1.2-3.8H370a66.47,66.47,0,0,0,12.6-.9c1.8-.4.9-2.2,0.9-2.2-2.2-4.6-4.7-4.3-4.7-4.3a84.17,84.17,0,0,0-19.6,1.7c-1.2.5-1.1,1.4,0.3,3.2a6,6,0,0,0,4.1,1.9l-2.4,4.6a4,4,0,0,0-2.5.7c-1.1,1.1.2,4.6,0.2,4.6s-0.5,1-1.1,2.6-2.2,4.3-.1,8.5,5.4,4,5.4,4C369.1,214.8,378.4,209.5,379,207.4Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M408.6,186.5a4.69,4.69,0,0,0-5.6-.2c-5.2,2.7-11.8,10.8-15.4,15.5-0.5-3.4,1.9-7.7,1.9-7.7l0.6-1c2.9-4.8,3.3-5.3,3.9-6.6s0.9-4,.3-4.3-1.6.6-1.6,0.6c-8.6,7.2-10,15.5-10,15.5-0.9,4.3-.2,7.4,1,9.6-4.9,10.2-6.7,19.9-6.7,23.7a8.7,8.7,0,0,0,4.8,7.5c1.7,0.7,2-1.4,2-1.4a95,95,0,0,1,7.3-24.3c8.6,2.3,15.7-6.7,17.9-10.1a19.22,19.22,0,0,0,2.5-9.1C411.7,193.8,411.6,188.7,408.6,186.5Zm-6.1,16.6a14.88,14.88,0,0,1-7.8,2.9,67,67,0,0,1,9.9-13.2c2.8-2.9,3-.2,3-0.2C408.1,197.9,404.2,201.7,402.5,203.1Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M103.7,196.3c-2.9-.9-5.6-1.7-5.6-3.5v-0.1c0-1.4,1.3-2.4,3.5-2.4a14,14,0,0,1,5.8,1.7,2.27,2.27,0,0,0,3.4-2,2.58,2.58,0,0,0-1.4-2.2,16.76,16.76,0,0,0-7.8-2c-4.9,0-8.8,2.9-8.8,7.6v0.1c0,4.7,4.1,6.3,7.8,7.3,2.9,0.9,5.5,1.6,5.5,3.5v0.1c0,1.6-1.4,2.7-3.9,2.7a12.85,12.85,0,0,1-7.1-2.4,2.38,2.38,0,0,0-1.2-.3,2.26,2.26,0,0,0-2.3,2.3,2.4,2.4,0,0,0,1.1,2,16.86,16.86,0,0,0,9.4,3c5.2,0,9.2-2.6,9.2-7.8v-0.1C111.4,199.1,107.3,197.4,103.7,196.3Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M130.2,185.6a9,9,0,0,0-7.8,4.3V179.2a2.85,2.85,0,0,0-5.7,0v29.1a2.85,2.85,0,0,0,5.7,0V196.9c0-3.9,2.3-6.2,5.6-6.2s5.3,2.2,5.3,6.1v11.5a2.82,2.82,0,0,0,2.9,2.8,2.73,2.73,0,0,0,2.8-2.8V195C139,189.4,135.8,185.6,130.2,185.6Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M157.3,185.6a13,13,0,0,0-13.3,13v0.1a13.26,13.26,0,0,0,26.5-.1v-0.1A12.87,12.87,0,0,0,157.3,185.6Zm7.5,13.1c0,4.3-2.9,7.8-7.5,7.8a7.66,7.66,0,0,1-7.6-7.9v-0.1c0-4.3,2.9-7.9,7.5-7.9s7.6,3.6,7.6,8.1h0Z" transform="translate(-91.6 -146.2)"></path>
+            <path class="cls-1" d="M190,185.6c-4,0-6.6,2.1-8.5,4.7v-1.6a2.9,2.9,0,0,0-2.9-2.9,2.82,2.82,0,0,0-2.8,2.9v27.2a2.85,2.85,0,0,0,5.7,0v-8.8a10.1,10.1,0,0,0,8.5,4.4c5.9,0,11.5-4.7,11.5-12.9v-0.1C201.5,190.2,195.8,185.6,190,185.6Zm5.7,13c0,4.9-3.2,7.9-7.1,7.9s-7.2-3.2-7.2-7.9v-0.1c0-4.7,3.4-7.9,7.2-7.9s7.1,3.1,7.1,8h0Z" transform="translate(-91.6 -146.2)"></path>
+        </svg>
+            </use>
+        </svg>
+      </a>
+    </header>
+    <div id="templates" style="display: none;">
+      <script id="locator_addressline" type="text/x-handlebars-template">
+        {{#if address1}}{{address1}}{{else}}{{#if addressline}}{{addressline}}{{/if}}{{ city }} {{ county }} {{ state }} {{postalcode}}{{/if}}
+      </script>
+        <script id="directions_addressline" type="text/x-handlebars-template">
+                {{#if address1}}{{address1}} {{ city }} {{ state }} {{postalcode}} {{else}} {{#if addressline}}{{addressline}}{{/if}} {{ city }} {{ state }} {{postalcode}}{{/if}}
+            </script>
+      <script id="collection_multiple_address" type="text/x-handlebars-template">
+        <b>Please select your location</b>
+        <ul class="content-list address-suggestions">
+        {{#each this}}
+        <li data-id={{@index}}><strong>{{address1}} {{ city }} {{ county }}</strong>{{ state }} {{postalcode}}</li>
+        {{/each}}
+        </ul>
+      </script>
+
+      <!-- icon template start  -->
+      <script id="default" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/bluePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="RED" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/bluePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            
+            <script id="DISNEYSTORE" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="49" data-height="45" data-offsetx="-24" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/bluePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="DISNEYBABY" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="46" data-height="45" data-offsetx="-23" data-offsety="-45" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/greenPin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="DISNEYOUTLET" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="50" data-height="46" data-offsetx="-25" data-offsety="-46" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/orangePin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+
+             <script id="DISNEYCLOSING" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="50" data-height="46" data-offsetx="-25" data-offsety="-46" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/redPin.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+            
+            <script id="PLAYMATION" type="text/x-handlebars-template">
+                <div class="icon" data-bubbleid="bubble" data-width="36" data-height="53" data-offsetx="-18" data-offsety="-53" data-labeloffsetx="0" data-labeloffsety="15"  data-fontcolor="#ffffff" data-fontsize="12px" data-display="false">
+                        <img class="alpha" src="https://stores.shopdisney.com/images/playmation/playmation_mapmarker.png" style="cursor:pointer;"/>
+                </div>
+            </script>
+      
+      <script id="center_marker" type="text/x-handlebars-template">
+        <div class="icon" data-bubbleid="bubble" data-width="30" data-height="28"  data-offsetx="-11" data-offsety="-33">
+        <img class="alpha" alt="redstar" src="https://hosted.where2getit.com/w2gi/images/zoombar/blank.gif"/>
+        </div>
+      </script>
+      <script id="ddstarticon" type="text/x-handlebars-template">
+        <div class="end_icon" data-width="27" data-height="38" data-offsetx="-16" data-offsety="-28">
+        <img class="alpha" alt="start" src="https://stores.shopdisney.com/images/driving-directions-start-marker.png"/>
+        </div>
+      </script>
+      <script id="ddendicon" type="text/x-handlebars-template">
+        <div class="end_icon" data-width="33" data-height="40" data-offsetx="-17" data-offsety="-40">
+        <img class="alpha" alt="end" src="https://stores.shopdisney.com/images/driving-directions-end-marker.png"/>
+        </div>
+      </script>
+      <!-- icon template end -->
+
+      <script id="bubble" <tmpl_if name="is_wireless_device">data-offsetx="10" data-offsety="-15" data-width="200" data-height="150" <tmpl_else> data-offsetx="10" data-offsety="-70" data-width="303" data-height="240" </tmpl_if> type="text/x-handlebars-template">
+          
+            
+                <ul class="tabs desktopOnly">
+                    <li class="active" data-tab="tab1">Address</li>
+                    <li data-tab="tab2">Hours</li>
+                    // <li data-tab="tab3">Events</li>
+                </ul>
+                <div class="tab-content active" data-tab="tab1">
+                    <a href="javascript: void(0);" onclick="grab('https://stores.shopdisney.com/{{state2}}{{province2}}/{{city2}}/{{clientkey}}/?utm_source=Disney+Store&utm_medium=Website&utm_campaign=Store+Locator');" class="name">{{name}}</a>
+            
+                   <div class="hideit{{message3}}" style="color: #000000;">{{message3}}</div>
+                   <div class="hideit{{store_result_message}}" style="margin-top:3px; color:#ff0000">{{store_result_message}}</div>
+
+          {{address1}}<br />
+          <span class="hideit{{address2}}">{{address2}}<br/></span>
+          {{city}}, {{state}}{{province}} {{postalcode}}<br />
+          <span class="desktopPhone">Phone:{{phone}}</span>
+                            
+                    <span class="mobilePhone">Phone: <a href="javascript:void(0);" onclick="window.parent.location = 'tel:{{phone}}';" >{{phone}}</a></span>
+                           
+          
+           <a href="javascript: void(0);" style="float:left; width:100%; margin-top:10px;" onclick="grab('https://stores.shopdisney.com/{{state2}}{{province2}}/{{city2}}/{{clientkey}}/?utm_source=Disney+Store&utm_medium=Website&utm_campaign=Store+Locator');" class="mobileOnly name">View Details</a>
+        
+          <br/>
+          
+                    <!-- <span class="desktopOnly">Send Address To:  
+                    <a class="lightwindow" data-width="680" data-height="480" data-url="/lite?appkey=4DE64C2C-25C4-11E0-9AF7-57014E48D7F4&action=emaillocatorstart&template=emaillocatorstart-jun&uid={{uid}}" title="Send to Email" href="" rel="nofollow">Email</a> | 
+                    <a class="lightwindow" data-width="680" data-height="380" data-url="/lite?appkey=4DE64C2C-25C4-11E0-9AF7-57014E48D7F4&action=smslocatorstart&template=smslocatorstart-jun&uid={{uid}}" title="Send to Mobile" href="" rel="nofollow">Mobile</a>
+                    </span> -->
+                          
+                    <br style="clear: both;" />
+
+          <div class="desktopOnly" style="float:left; width:100%; margin-bottom:10px; margin-top: 10px;"><a target="_blank" onclick="window.open('http://www.facebook.com/shopdisney');" href="http://www.facebook.com/shopdisney"><img src="https://stores.shopdisney.com/images/facebook.png" alt="Facebook"/></a> <a target="_blank" onclick="window.open('https://twitter.com/shopdisney/');" href="https://twitter.com/shopdisney/"><img src="https://stores.shopdisney.com/images/twitter.png" alt="Twitter"/></a>  <a target="_blank" onclick="window.open('http://www.pinterest.com/shopdisney');" href="http://www.pinterest.com/shopdisney"><img src="https://stores.shopdisney.com/images/pinterest.png" alt="Pinterest"/></a></div>
+
+
+            <div class="desktopOnly hideit{{message}}" style="margin-top:3px; color: #FF0000;">{{message}}</div>
+          <div class="desktopOnly hideit{{message2}}" style="margin-top:3px; color: #FF0000;">{{message2}}</div>
+                      
+
+                    <div class="dd-wrapper desktopOnly" style="margin-top:10px;">
+                        <div class="origin-select hideit">
+                            <a href="#" data-action="to" class="">To here</a>|<a href="#" data-action="from">From here</a>
+                        </div>
+                        <form id="dd" autocomplete="off">
+                            <span>From:</span> <br/>
+                            <input size="19" type="text" name="addressline" value="{{addressline}}" class="search-box" style="width:150px; margin-bottom:3px;"/>
+                            
+                           <select id="bubble_country" name="country" class="select-box" style="display:none; width:180px; padding:8px 5px;">
+                            
+                              <option value="">Select a country</option>
+                              {{#each options}}
+                                <option value="{{value}}" {{#if selected}}selected="selected"{{/if}}>{{text}}</option>
+                              {{/each}}
+                            
+                            </select>
+                            <input type="submit" value="Go" class="button-search"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-content" data-tab="tab2">
+                  
+                  <table style="font-size: 12px; margin-top:10px; line-height: 20px;">
+            <tr>
+              <td> Monday:</td> <td>{{mon_op}} - {{mon_cl}} </td>
+            </tr>
+            <tr>
+              <td> Tuesday:</td> <td> {{tue_op}} - {{tue_cl}}</td>
+            </tr>
+            <tr>
+              <td> Wednesday:</td> <td>{{wed_op}} - {{wed_cl}}</td>
+            </tr>
+            <tr>
+              <td> Thursday:</td> <td> {{thu_op}} - {{thu_cl}}</td>
+            </tr>
+            <tr>
+              <td> Friday:</td> <td> {{fri_op}} - {{fri_cl}}</td>
+            </tr>
+            <tr>
+              <td> Saturday:</td> <td> {{sat_op}} - {{sat_cl}}</td>
+            </tr>
+            <tr>
+              <td> Sunday:</td> <td> {{sun_op}} - {{sun_cl}}</td>
+            </tr>
+          </table>
+                  
+                </div>
+                <div class="tab-content" data-tab="tab3">
+                    <span style="color: #000000">{{eventheadline1}}</span><br />
+                    {{eventdescription1}}
+                    <br /><br />
+                    <span style="color: #000000">{{eventheadline2}}</span><br />
+                    {{eventdescription2}}
+                </div>
+            </script>
+            <!-- bubble template end -->
+
+      <!-- POI table template start -->
+      <script id="collection_poi" type="text/x-handlebars-template">
+
+        <ul class="content-list poi-result"> 
+
+        {{#each pois}}
+        <li data-id={{@index}} data-uid={{uid}} class="poi-item hidefirst{{@index}}" style="float: left; margin-right:10px; margin-bottom:10px;">
+
+        <div class="nearby_icon">
+        <span class="poinum"> 
+        <div>
+        <a data-action="open_bubble" style="cursor:pointer;color:#fff;">{{incIndex @index}}</a>
+        </div>
+        </span>
+        </div>
+
+        <div class="nearby_details">  
+        <div>
+        <span style="font-weight:bold;">{{name}}</span>
+        <a data-action="open_bubble" data-linktrack="view-on-map-click" class="open_bubble">View on map </a>
+
+        </div>
+
+        <div class="address1">
+        {{address1}}
+        </div>
+
+        <div class="address2">
+        {{city}}, {{state}}{{province}} {{postalcode}}
+        <br />
+        Phone: {{phone}}
+        </div>
+
+        </div>
+
+        </li>
+
+        {{/each}}
+        </ul>
+
+        
+      </script>
+      <!-- POI table template end -->
+
+      <!-- More Info table template start -->
+      <script id="collection_more_info" type="text/x-handlebars-template">
+        <table odd_row_class="odd" even_row_class="even" active_row_class="active" slice_size="5">
+        <thead>
+        <tr>
+        <td></td>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+        <td></td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr recnum="#{POINUM}">
+        <td width="33px" valign="top">
+        <div templateid="#{ICON}"></div>
+        </td>
+        <td width="310px">
+        <a action="open_bubble" class="store_name" recnum="#{POINUM}" href="javascript:void(0);">#{NAME}</a>
+        <br/>
+        #{ADDRESS1}
+        <br/>
+        #{CITY}, #{STATE}#{PROVINCE} #{POSTALCODE}
+        <br/>
+        <strong>#{PHONE}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td colspan="2">
+        <a action="show_all" recnum="#{POINUM}" href="javascript:void(0);">Show All Locations</a>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+      </script>
+      <!-- More Info table template end -->
+
+      <!-- Ambiguous address table template start -->
+      <!--script id="collection_multiple_address" type="text/x-handlebars-template">
+        <table odd_row_class="odd" even_row_class="even" active_row_class="active">
+        <thead>
+        <tr>
+        <th>Did you mean:</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+        <td></td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr recnum="#{POINUM}">
+        <td width="250px">
+        <a action="search_address" recnum="#{POINUM}" href="javascript:void(0);">#{ADDRESS1} #{CITY}, #{STATE}#{PROVINCE} #{POSTALCODE}</a>
+        <br/>
+        #{COUNTY}
+        </td>
+        </tr>
+        </tbody>
+        </table>
+      </script-->
+      <!-- Ambiguous address table template end -->
+
+      <!-- driving directions panel template end -->
+      <script id="collection_maneuvers" type="text/x-handlebars-template">
+        <p>
+        <a class="search_again" href="javascript:void(0);" target="_parent" onclick="window.location.reload()">Back to Store Details</a>
+        </p>
+        <p><strong>Distance: {{total_distance}} miles.         
+        <br/>Drive time: {{total_time}} minutes</strong></p>
+        
+        <p class="maneuver_start">
+        From (A): <strong>{{#if fromAddress.address1}}{{fromAddress.address1}}{{else}}{{#if fromAddress.addressline}}{{fromAddress.addressline}}{{/if}} {{ fromAddress.city }} {{ fromAddress.county }} {{ fromAddress.state }} {{fromAddress.postalcode}}{{/if}} </strong>
+        </p>
+        <ul class="content-list maneuver-result">
+        {{#each maneuverlist}}
+        <li data-id={{@index}} data-uid={{uid}}>
+        <strong>{{incIndex @index}} </strong>{{text}} {{distance}} {{distanceuom}}
+        </li>
+        {{/each}}
+        </ul>
+        <p class="maneuver_end">
+        To (B): <strong>{{#if toAddress.address1}}{{toAddress.address1}}{{else}}{{#if toAddress.addressline}}{{toAddress.addressline}}{{/if}} {{ toAddress.city }} {{ toAddress.county }} {{ toAddress.state }} {{toAddress.postalcode}}{{/if}} </strong>
+        </p>
+
+      </script>
+
+      <!-- Maneuvers table template end -->
+      <div id="lightwindow_cache" params="lightwindow_width=400, lightwindow_height=300, lightwindow_loading_animation=false">
+        <span id="lightwindow_cache_data" style="line-height: auto;
+        overflow: visible,
+        position: relative;float: left;width: 100%;"></span>
+      </div>
+    </div>
+    <!-- End Locator Map/POI List Templates -->
+
+    <div data-w2gi="locator" id="w2gilocalmain" >
+
+      <div id="form">
+
+        <form id="locator_search" autocomplete="off"></form>
+        <form id="driving_directions" autocomplete="off" style="display: none;">
+
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  From:
+                </td>
+                <td>
+                  <input class="addressentry" id="startaddress" type="text" size="28" name="addressline" value="Start address" onClick="clear_search_directions_box(this);"/>
+                  To:
+                </td>
+                <td>
+                  <input class="addressentry" id="endaddress" type="text" size="28" name="addressline" value="End address" onClick="clear_search_directions_box(this);"/>
+                  <input id="driving_directions_button" type="submit" value="Get Directions" name="driving_directions"/>
+                </td>
+                <td>
+                  <a class="search_toggle" href="javascript:void(0);" style="font-size:12px;">Search Again</a>
+                </td>
+              </tr>
+
+              <!-- <tr><td colspan="3" style="text-align:right;"></td></tr> -->
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <!-- end of form -->
+
+
+      <h1 class="toptitle"><TMPL_VAR  NAME="city_pc">, <tmpl_var name="state_longname_pc"> (<TMPL_VAR  NAME="state"><TMPL_VAR NAME="province">)</h1>
+
+      <!-- Start Breadcrumb -->
+      <div class="breadcrumb">
+        <a data-linktrack="Top index page" href="<TMPL_VAR NAME='topindex_url_lc'>" >Select a Location</a> &gt; <a data-linktrack="State index page - <TMPL_VAR NAME='state_longname_pc'>" href="<TMPL_VAR NAME='stateindex_url_lc'>" ><TMPL_VAR NAME="state_longname_pc"> (<TMPL_VAR NAME="state"><TMPL_VAR NAME="province">)</a> &gt; <a data-linktrack="City index page - <TMPL_VAR NAME='city_pc'>" href="<TMPL_VAR NAME='cityindex_url_lc'>" ><TMPL_VAR NAME="city_pc"></a>
+        <!--<TMPL_VAR NAME="city">-->
+      </div>
+      <!-- End Breadcrumb -->
+      <tmpl_if expr="((store_closing eq '1') || (promotion eq '1'))">
+        <style>
+
+          .banner-closing {
+            margin-bottom: 30px;
+            width: 100%;
+          }
+
+          .banner-closing img {
+            height: auto;
+            width: 100%;
+          }
+
+          .banner-mobile {
+            display: none;
+          }
+          @media (max-width: 512px) {
+            .banner-desktop {
+              display: none;
+            }
+            .banner-mobile {
+              display: inline;
+            }
+          }
+        </style>
+        <div class="banner-closing">
+          <a href="https://www.shopdisney.com/store-locator-and-special-events">
+            <img src="/images/Closing-PERMANENT.jpg" alt="This location is permanently closed. But don't worry! You can still find the whole gang at another Disney store location or shopdisney.com">
+            <!-- <img src="/images/Closing-mobile.jpg" alt="" class="banner-mobile"> -->
+          </a>
+        </div>
+      </tmpl_if>
+
+      <tmpl_if expr="((store_closing ne '1') && (promotion eq '2'))">
+            <style>
+
+              .banner-closing {
+                margin-bottom: 30px;
+                width: 100%;
+              }
+
+              .banner-closing .desktoppromo, .banner-closing .mobilepromo {
+                height: auto;
+                width: 100%;
+              }
+
+              .mobilepromo {
+                display: none;
+              }
+              @media (max-width: 512px) {
+                .desktoppromo {
+                  display: none;
+                }
+                .mobilepromo {
+                  display: block;
+                }
+              }
+            </style>
+            <div class="banner-closing">
+                 <img class="desktoppromo" src="/images/storeclosureslocatorupdates/Closing 1600x623_9_1.jpg" alt="This location will close on or Before September 1st.">
+                 <img class="mobilepromo" src="/images/storeclosureslocatorupdates/Closing 512x512_9_1.jpg" alt="This location will close on or Before September 1st.">
+             </div>
+      </tmpl_if>
+
+      <tmpl_if expr="((store_closing ne '1') && (promotion eq '3'))">
+            <style>
+
+              .banner-closing {
+                margin-bottom: 30px;
+                width: 100%;
+              }
+
+              .banner-closing .desktoppromo, .banner-closing .mobilepromo {
+                height: auto;
+                width: 100%;
+              }
+
+              .mobilepromo {
+                display: none;
+              }
+              @media (max-width: 512px) {
+                .desktoppromo {
+                  display: none;
+                }
+                .mobilepromo {
+                  display: block;
+                }
+              }
+            </style>
+            <div class="banner-closing">
+                 <img class="desktoppromo" src="/images/storeclosureslocatorupdates/Closing 1600x623_9_8.jpg" alt="This location will close on or Before September 8th.">
+                 <img class="mobilepromo" src="/images/storeclosureslocatorupdates/Closing 512x512_9_8.jpg" alt="This location will close on or Before September 8th.">
+             </div>
+      </tmpl_if>
+
+      <tmpl_if expr="((store_closing ne '1') && (promotion eq '4'))">
+            <style>
+
+              .banner-closing {
+                margin-bottom: 30px;
+                width: 100%;
+              }
+
+              .banner-closing .desktoppromo, .banner-closing .mobilepromo {
+                height: auto;
+                width: 100%;
+              }
+
+              .mobilepromo {
+                display: none;
+              }
+              @media (max-width: 512px) {
+                .desktoppromo {
+                  display: none;
+                }
+                .mobilepromo {
+                  display: block;
+                }
+              }
+            </style>
+            <div class="banner-closing">
+                 <img class="desktoppromo" src="/images/storeclosureslocatorupdates/Closing 1600x623_9_15.jpg" alt="This location will close on or Before September 15th.">
+                 <img class="mobilepromo" src="/images/storeclosureslocatorupdates/Closing 512x512_9_15.jpg" alt="This location will close on or Before September 15th.">
+             </div>
+      </tmpl_if>
+
+      <tmpl_if expr="((store_closing ne '1') && (promotion eq '5'))">
+            <style>
+
+              .banner-closing {
+                margin-bottom: 30px;
+                width: 100%;
+              }
+
+              .banner-closing .desktoppromo, .banner-closing .mobilepromo {
+                height: auto;
+                width: 100%;
+              }
+
+              .mobilepromo {
+                display: none;
+              }
+              @media (max-width: 512px) {
+                .desktoppromo {
+                  display: none;
+                }
+                .mobilepromo {
+                  display: block;
+                }
+              }
+            </style>
+            <div class="banner-closing">
+                 <img class="desktoppromo" src="/images/storeclosureslocatorupdates/Closing 1600x623_9_22.jpg" alt="This location will close on or Before September 22nd.">
+                 <img class="mobilepromo" src="/images/storeclosureslocatorupdates/Closing 512x512_9_22.jpg" alt="This location will close on or Before September 22nd.">
+             </div>
+      </tmpl_if>
+
+      <tmpl_if expr="locator_special_message ne ''">
+        <style>
+
+          .banner-closing {
+            margin-bottom: 30px;
+            width: 100%;
+          }
+
+          .banner-closing img {
+            height: auto;
+            width: 100%;
+          }
+
+          .banner-mobile {
+            display: none;
+          }
+          @media (max-width: 512px) {
+            .banner-desktop {
+              display: none;
+            }
+            .banner-mobile {
+              display: inline;
+            }
+          }
+        </style>
+        
+        <tmpl_if expr="((store_closing ne '1') && (promotion ne '1') && (promotion ne '4') && (promotion ne '3') && (promotion ne '2') && (promotion ne '5'))">
+	        <div class="banner-closing">
+	            <img src="https://stores.shopdisney.com/images/Closing 1600x623_8_18.jpg" alt="" class="banner-desktop">
+	            <img src="https://stores.shopdisney.com/images/Closing 512x512_8_18.jpg" alt="" class="banner-mobile">
+	        </div>
+        </tmpl_if>
+        
+      </tmpl_if>
+      
+      <tmpl_if expr="clientkey eq '764'">
+        <div class="covid-wrap">
+          <img src="https://stores.shopdisney.com/images/sl_store-closure_20210202.jpg" alt="Sorry for the inconvenience, but this location is temporarily closed.  We look forward to seeing you soon and bringing Disney magic back to your shopping." />
+        </div>
+      <tmpl_else>
+
+
+          <div class="covid-wrap">
+            <a href="https://www.shopdisney.com/disney-stores/know-before-you-go/" target="_blank">
+              <!-- <img src="https://stores.shopdisney.com//images/kbyg_v2.jpg" alt="Know Before You Go - We're introducing a number of new and enhanced health and safety measures as Disney stores begin to open in select locations. Follow all posted instructions while visiting re-opened Disney store locations. An inherent risk of exporsure to COVID-19 exists in any public place where people are present." /> -->
+              <img src="https://stores.shopdisney.com/images/sl-kbyg.jpg" alt="Disney Store is taking a responsible and phased approach to reopening and implementing a number of new health and safety measures based on guidance from health authorities, such as the Centers for Disease Control and Prevention (CDC) and aoppropriate government agencies. An inherent risk of exposure to COVID-19 exists in any public place where people are present." />
+            </a>
+        </div>
+
+</tmpl_if>
+
+
+
+        
+        <!-- <tmpl/_if expr="((discount eq '1') || (discount eq '2'))"> -->
+        <style>
+          .mymodaloverlay {
+            background-color: rgba(0,0,0,.55);
+            display: none;
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+          }
+          .mymodal {
+            background-color: #fff;
+            display: none;
+            height: 335px;
+            left: 50%;
+            max-width: 394px;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 90%;
+            z-index: 20;
+
+          }
+          .mymodal h3 {
+            font-size: 1.3125rem;
+            font-weight: 300;
+            letter-spacing: .025em;
+            margin-top: 41px;
+            position: relative;
+          }
+
+          .mymodal h3:after {
+            border-bottom: 1px solid #dee2e6;
+            content: "";
+            display: block;
+            margin: 5px auto 0;
+            width: 85%;
+          }
+
+          .mymodal p {
+            color: #6d7b8a;
+            font-weight: 300;
+            width: 85%;
+            margin: 0 auto;
+          }
+
+          .mymodal a.modalClose {
+            color: #6a7888;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 20px;
+            text-decoration: none;
+            top: 12px;
+          }
+
+          .mymodal a.modalLink {
+            background: #0795e6;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            height: 54px;
+            line-height: 54px;
+            margin: 13px auto 0;
+            text-align: center;
+            text-decoration: none;
+            width: 265px;
+          }
+
+          .mymodal a.modalLink:hover {
+            background: #0685cd;
+          }
+          .banner, .banner * {
+            box-sizing: border-box;
+          }
+
+          .banner {
+             background-image: url(/images/lp_early_hours_events_blank.pattern.jpg);
+            background-size: cover;
+            clear: both;
+            float: left;
+            height: 400px;
+            margin: 0 0 30px;
+            position: relative;
+            width: 100%;
+          }
+
+          .banner a {
+            color: #000;
+            text-decoration: underline;
+          }
+
+          .banner img {
+             height: calc(100% - 44px);
+            left: 22px;
+            object-fit: cover;
+            object-position: right;
+            position: absolute;
+            top: 22px;
+            width: calc(100% - 44px);
+          }
+
+          .banner_inner {
+            position: relative;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          
+          .banner h3 {
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            margin-left: 0;
+            text-align: center;
+            width: 100%;
+          }
+          
+          .banner p {
+            color: #000;
+            /*font-size: 16px;*/
+            font-size: 14px;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 450px;
+          }
+
+          .banner2 {
+            margin-top: 20px;
+            width: 100%;
+          }
+
+          .banner2 img {
+            height: auto;
+            width: 100%;
+          }
+          /*.banner a {
+          }*/
+
+              @media (max-width: 960px) {
+            .banner_inner {
+              top: calc(50% + 15px);
+            }
+          }
+
+          @media (max-width: 767px) {
+            .banner {
+              padding: 20px 20px 0;
+            }
+
+            /*.banner img {
+              object-fit: cover;
+              width: 100vw;
+            }*/
+
+            .banner h3 {
+              font-size: 18px;
+              line-height: 23px;
+              width: 100%;
+            }
+          }
+
+            @media (max-width: 580px) {
+            .banner_inner {
+              margin: 0 auto;
+              max-width: 74%;
+              top: calc(50% + 10px)
+            }
+          }
+
+
+          @media (max-width: 520px){
+            .banner {
+              padding: 20px 170px 0 30px;
+            }
+          }
+
+          @media (max-width: 414px) {
+        
+
+            .banner h3 {
+              margin: 0 auto;
+              width: 100%;
+            }
+
+            .banner_inner {
+              max-width: 100%;
+              top: calc(50%);
+            }
+          }
+
+          .banner-sameday {
+            margin-bottom: 20px;
+            width: 100%;
+            display: none!important;
+          }
+
+          .banner-sameday a {
+            display: block;
+          }
+
+          .banner-sameday a img {
+            height: auto;
+            width: 100%;
+          }
+
+          .banner-sameday a img:first-of-type {
+            display: block;
+          }
+
+          .banner-sameday a img:last-of-type {
+            display: none;
+          }
+          
+            @media (max-width: 512px) {
+            .banner-sameday a img:first-of-type {
+              display: none;
+            }
+
+            .banner-sameday a img:last-of-type {
+              display: block;
+            }
+          }
+
+        </style>
+        
+        <tmpl_unless expr="((store_closing eq '1')||(promotion eq '1')||(promotion eq '2')||(locator_special_message ne ''))">
+          <tmpl_unless expr="clientkey eq '764'">
+            <tmpl_if expr="((clientkey eq '449') || (clientkey eq '301') || (clientkey eq '344') || (clientkey eq '545') || (clientkey eq '870') || (clientkey eq '542') || (clientkey eq '860') || (clientkey eq '826') || (clientkey eq '484') || (clientkey eq '865') || (clientkey eq '949'))">
+              <div class="banner-sameday">
+                <a href="https://www.shopdisney.com/same-day-delivery/?cmp=STORES_StoreLocator_InstaCart_Other_IntegratedLink_120120_Brandify_Instacart_Launch" target="_blank">
+                  <img src="/images/insta1600.jpeg" alt="Get Same Day Delivery on Select Items - Order from a selection of products for same day delivery from most Disney store locations.">
+                  <img src="/images/insta512.jpeg" alt="Get Same Day Delivery on Select Items - Order from a selection of products for same day delivery from most Disney store locations.">
+                </a>
+              </div>
+            <tmpl_else>
+              <div class="banner-sameday">
+                <a href="https://www.shopdisney.com/same-day-delivery/?cmp=STORES_StoreLocator_InstaCart_Other_IntegratedLink_120120_Brandify_Instacart_Launch" target="_blank">
+                  <img src="/images/evergreen_sl-instacart.jpg" alt="Get Same Day Delivery on Select Items - Order from a selection of products for same day delivery from most Disney store locations.">
+                  <img src="/images/evergreen_sl-instacart.jpg" alt="Get Same Day Delivery on Select Items - Order from a selection of products for same day delivery from most Disney store locations.">
+                </a>
+              </div>
+            </tmpl_if>
+          </tmpl_unless>
+        </tmpl_unless>
+        <div style="margin-bottom: 20px; width: 100%;">
+          <a href="https://www.disneymovieinsiders.com/play/falcon-winter-soldier?cmp=DMI%7CSITE%7CSYN%7C%7CPLAY%7Cfalcon%7CBANNER%7CshopDisney%7C%7C%7C%7C5157%7C6FMFWVQY5G" target="_blank">
+            <img style="width:100%;" src="/images/faws.png" alt="The Falcon and Winter Soldier">
+          </a>
+        </div>
+        
+
+        <tmpl_if expr="((promotion ne '1')&&(discount ne '1')&&(promotion ne '2')&&(discount ne '2'))">
+        
+        <style>
+          
+          .banner, .banner * {
+            box-sizing: border-box;
+          }
+
+          .banner {
+            background-image: url(/images/lp_early_hours_events_blank.pattern.jpg);
+            background-size: cover;
+            clear: both;
+            float: left;
+            height: 400px;
+            margin: 0 0 30px;
+            position: relative;
+            width: 100%;
+          }
+
+          .banner a {
+            /*display: block;
+            height: 100%;
+            text-decoration: none;
+            width: 100%;*/
+            color: #000;
+            text-decoration: underline;
+          }
+
+          .banner img {
+            height: calc(100% - 44px);
+            left: 22px;
+            object-fit: cover;
+            object-position: right;
+            position: absolute;
+            top: 22px;
+            width: calc(100% - 44px);
+          }
+
+          .banner_inner {
+            position: relative;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          
+          .banner h3 {
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            width: 100%;
+            margin-left: 0;
+          }
+          
+          .banner p {
+            color: #000;
+            /*font-size: 16px;*/
+            font-size: 18px;
+            margin: 0 auto;
+            max-width: 480px;
+            padding: 0;
+          }
+
+          .banner p span {
+            color: #000;
+            white-space: nowrap;
+          }
+
+          .banner2 {
+            margin-top: 20px;
+            width: 100%;
+          }
+
+          .banner2 img {
+            height: auto;
+            width: 100%;
+          }
+          /*.banner a {
+          }*/
+
+          @media (max-width: 960px) {
+            .banner_inner {
+              top: calc(50% + 15px);
+            }
+          }
+
+          @media (max-width: 767px) {
+            .banner {
+              padding: 20px 20px 0;
+            }
+
+            /*.banner img {
+              object-fit: cover;
+              width: 100vw;
+            }*/
+
+            .banner h3 {
+              font-size: 18px;
+              line-height: 23px;
+              width: 100%;
+            }
+          }
+
+          @media (max-width: 580px) {
+            .banner_inner {
+              margin: 0 auto;
+              max-width: 74%;
+              top: calc(50% + 10px)
+            }
+          }
+
+            @media (max-width: 520px){
+            .banner {
+              padding: 20px 170px 0 30px;
+            }
+          }
+
+          @media (max-width: 414px) {
+         
+            .banner h3 {
+              margin: 0 auto;
+              width: 100%;
+            }
+
+            .banner_inner {
+              max-width: 100%;
+              top: calc(50%);
+            }
+            
+          }
+        </style>
+        <div class="banner" style="display:none !important;">
+            <img src="/images/lp_early_hours_events_blank.no-border.jpg" alt="">
+            <div class="banner_inner">
+              <p>This store is not currently participating in Early Hour <span>In-store</span> Shopping events. Please visit during regular opening hours.</p>
+            </div>
+          </div>
+        
+        </tmpl_if>
+
+      <div class="fullwidth">
+      
+        <div class="half"> <!-- left half section -->
+          <div class="imageWrapper" style="">
+            <tmpl_if expr="(storetype eq 'P30')">
+                <img class="storeImg" src="https://stores.shopdisney.com/images/sDDs-P30-Store.jpg" alt='Disney Store in <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state"> | Toy Store'>
+            <tmpl_else>
+              <TMPL_IF NAME="storeimageurl">
+                          <img class="storeImg" alt="Disney Store in <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state"> | Toy Store" src="<TMPL_VAR NAME="storeimageurl">">
+              <TMPL_ELSE>
+                        <img class="regularimg<tmpl_var name='icon'>" style="border-radius: 5px 5px 5px 5px; height: 317px; width: 482px;" src="https://cdn-ssl.img.shopdisney.com/content/global/w2gi/ds.jpg" alt="Disney Store in <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state"> | Toy Store">
+
+                    <img class="bbimg<tmpl_var name='icon'>" style="border-radius: 5px 5px 5px 5px; height: 317px; width: 482px; display: none;" src="https://cdn-ssl.img.shopdisney.com/content/ds/skyway/2015/freeform/storeLocator/ds-baby-americana.jpg">
+              </TMPL_IF>
+            </tmpl_if>
+              </div> <!-- end of imageWrapper -->
+              
+               <div class="fbemail desktopOnly">
+              <a target="_blank" href="https://www.facebook.com/shopdisney"><img src="https://stores.shopdisney.com/images/facebook_icon.jpg" /></a><a target="_blank" href="https://twitter.com/shopdisney/"><img src="https://stores.shopdisney.com/images/twitter_icon.jpg" /></a><a target="_blank" href="https://www.pinterest.com/shopdisney"><img src="https://stores.shopdisney.com/images/pint_icon.jpg" /></a>
+            </div>
+            <div class="desktopOnly">
+              <div class="headerLabel regulartext<tmpl_var name='icon'>">The widest selection of authentic Disney Merchandise</div>
+              <div class="headerLabel bbtext<tmpl_var name='icon'>" style="display: none;">Creating Magical Moments Right from the Start™</div>
+
+              <div class="paddingRight regulartext<tmpl_var name='icon'>">Disney store is a premier destination to meet the gifting needs of girls, boys, men, & women. Find Disney Princess dresses inspired by Ariel, Moana & more. Like Star Wars and Marvel’s Avengers? We have cosplay & costumes, too, from Rey & the Child, affectionately known as Baby Yoda to Spider-Man, Captain America & Black Panther. Our magical experience includes everything for adults & kids. Find Disney clothing, toys, games, & stuffed animals from Elsa & Anna to Lilo & Stitch to Buzz Lightyear & Woody. Find National Geographic merch when you are feeling adventurous or turn your home into a Disney castle with home décor inspired by Cinderella. Shopping can feel like a magical Disney vacation, so wear your Mickey Mouse & Minnie Mouse ears.</div>
+              
+        
+              <div class="paddingRight bbtext<tmpl_var name='icon'>" style="display: none;">
+              Serving as the flagship location, the Disney Baby Store at The Americana at Brand offers an exclusive array of high-quality bedding, apparel, toys, special occasion items and more that add an extra dash of magic to your time with Baby.
+              </div>       
+        
+            </div>
+              
+        </div> <!-- end of left half -->
+        
+        <div class="half"> <!-- right half section -->
+          
+          <div id="map" class="map"></div>
+          <div id="panel" class="poi panel"></div>
+          <!-- nearby locartions info, if applied -->
+        
+          <!-- main location info -->
+          <div class="addressBlock">
+          
+                      
+             <div itemprop="address" class="half border" style="margin-left:0px; margin-right:0px;">
+                      <meta itemprop="name" content="Disney Store"/>
+                      <meta itemprop= "description" content="Disney merchandise including toys, clothing, theme park merchandise, costumes and more. Located at <TMPL_VAR  NAME="address1"> <TMPL_VAR  NAME="city">, <TMPL_VAR  NAME="state">, <TMPL_VAR  NAME="postalcode">">
+                      <meta itemprop="sameAs" content="https://www.facebook.com/shopdisney" />
+                      <meta itemprop="sameAs" content="https://twitter.com/shopdisney/" />
+                      <meta itemprop="sameAs" content="https://www.pinterest.com/shopdisney" />
+                      <div class="headerLabel">Address:</div>
+      
+                      <div class="desktopOnly name"><a id="btn-external" href="javascript:void(0);" class='store_name' onClick="_gaq.push(['_trackMarketingspot', 'Map', 'W2GI/GA action open bubble']);">Disney <span class="store_name regularspan<tmpl_var name='icon'>">Store</span><span class="store_name bbspan<tmpl_var name='icon'>" style="display: none;">Baby</span><span class="store_name outletspan<tmpl_var name='icon'>" style="display: none;"> Outlet</span></a></div>
+      
+                      <div class="mobileOnly name" style="display:none;">Disney <span class="regularspan<tmpl_var name='icon'>" >Store</span><span class="bbspan<tmpl_var name='icon'>" style="display: none;">Baby</span><span class="outletspan<tmpl_var name='icon'>" style="display: none;"> Outlet</span></div>
+      
+                      <div itemprop="containedIn"><TMPL_VAR NAME="NAME"></div>
+      
+                      <div class="showMessage<TMPL_VAR NAME=STORE_RESULT_MESSAGE>" style="margin-top:3px; color:#ff0000"><TMPL_VAR NAME="STORE_RESULT_MESSAGE"></div>
+      
+                    <div class="desktopOnly" itemprop="address">
+                        <div itemprop="streetAddress"><TMPL_VAR NAME="ADDRESS1"></div>
+                        <div class="hide<TMPL_VAR NAME=ADDRESS2>"><TMPL_VAR NAME="ADDRESS2"></div>
+                          <span itemprop="addressLocality"><TMPL_VAR NAME="city"></span>,
+                          <span itemprop="addressRegion"><TMPL_VAR NAME="state"><TMPL_VAR NAME="PROVINCE"></span>
+                          <span itemprop="postalCode"><TMPL_VAR NAME="postalcode"></span>
+                    </div>
+                    
+                      <div class="mobileOnly" itemprop="address" style="display:none;">
+                        <div itemprop="streetAddress"><TMPL_VAR NAME="ADDRESS1"></div>
+                        <div class="hide<TMPL_VAR NAME=ADDRESS2>"><TMPL_VAR NAME="ADDRESS2"></div>
+                          <span itemprop="addressLocality"><TMPL_VAR NAME="city"></span>,
+                          <span itemprop="addressRegion"><TMPL_VAR NAME="state"><TMPL_VAR NAME="PROVINCE"></span>
+                          <span itemprop="postalCode"><TMPL_VAR NAME="postalcode"></span>
+                          <br/>
+                          <a class="mobileOnly" href="javascript:void(0);" onclick="window.open('http://maps.apple.com/maps?q=Disney Store,<tmpl_var name=address1>,<tmpl_var name=city>,<tmpl_var name=state><tmpl_var name=postalcode>','_parent')">
+                              Get Directions
+                          </a>
+                      </div>
+                             
+                     
+                      <p itemprop="branchOf" style="display:none">
+                          <meta itemprop="name" content="Disney Store">
+                          <meta itemprop="url" content="http://www.disneystore.com/">
+                      </p>
+                      <w2gi name="CustomContent" options="clientkey=siteadmin,contentname=BHODATA">
+                      <time itemprop="openingHours" datetime="Mo <TMPL_VAR NAME="BHO_MON_OPEN">-<TMPL_VAR NAME="BHO_MON_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="Tu <TMPL_VAR NAME="BHO_TUE_OPEN">-<TMPL_VAR NAME="BHO_TUE_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="We <TMPL_VAR NAME="BHO_WED_OPEN">-<TMPL_VAR NAME="BHO_WED_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="Th <TMPL_VAR NAME="BHO_THU_OPEN">-<TMPL_VAR NAME="BHO_THU_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="Fr <TMPL_VAR NAME="BHO_FRI_OPEN">-<TMPL_VAR NAME="BHO_FRI_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="Sa <TMPL_VAR NAME="BHO_SAT_OPEN">-<TMPL_VAR NAME="BHO_SAT_CLOSED">"/>
+                      <time itemprop="openingHours" datetime="Su <TMPL_VAR NAME="BHO_SUN_OPEN">-<TMPL_VAR NAME="BHO_SUN_CLOSED">"/>
+      
+      
+                   <div style="margin:8px 0;">
+                      <a style="color:grey !important; text-decoration:none !important;" href="javascript:void(0);" onclick="window.parent.location = 'tel:<TMPL_VAR NAME=phone>';">
+                      Phone: <span itemprop="telephone"><TMPL_VAR NAME="PHONE"></span>
+                      </a>
+                   </div>
+      
+                    <div class="desktopOnly">
+                   <!-- Send address to: 
+                <a class="lightwindow" data-width="680" data-height="480" data-linktrack="send-to-email-click" data-url="//hosted.where2getit.com/lite?appkey=<TMPL_VAR NAME="appkey">&amp;action=emaillocatorstart&amp;template=emaillocatorstart-jun&amp;uid=<tmpl_var name=uid>" data-title="Send to Phone" href="javascript: void(0);" rel="nofollow"> E-mail </a> |        
+                <a class="lightwindow" data-width="680" data-height="380" data-linktrack="send-to-phone-click" data-url="//hosted.where2getit.com/lite?appkey=<TMPL_VAR NAME="appkey">&amp;action=smslocatorstart&amp;template=smslocatorstart-jun&amp;uid=<tmpl_var name=uid>" data-title="Send to Phone" href="javascript: void(0);" rel="nofollow"> Mobile </a> -->
+                
+              <div class="hideit<TMPL_VAR NAME=MESSAGE>" style="margin-top:3px; color: #FF0000;"><TMPL_VAR NAME="MESSAGE"></div>
+                      <div class="hideit<TMPL_VAR NAME=MESSAGE2>" style="margin-top:3px; color: #FF0000;"><TMPL_VAR NAME="MESSAGE2"></div>
+                    </div>
+                    
+            </div> <!-- close address div -->
+            
+            
+            <div class="hours half border" style="margin-left:0px; margin-right:0px;">
+              
+              <!-- TEST11 -->
+              <!--will use  <tmpl/_if expr="store_closing eq '1'">
+              <div class="headerLabel" style="color: #ff0000;">Closed</div>
+              <tmpl/_else> -->
+              <div class="headerLabel">Hours of Operation:</div>
+              
+              <tmpl_if specialhours>
+                <style>
+                    #poihours > tr {
+                      display: none;
+                    }
+                    #poihours > tr:nth-child(-n+7) {
+                      display: table-row; 
+                    }
+                </style>
+                  <table id="poihours" style="margin:0px; padding:0px; width:100%;">
+
+                  </table>
+                  <script>
+                    ;(function(){
+                      var rawHours = '<tmpl_var specialhours>';
+                      var hourArr = rawHours.split(', ')
+                      var d1 = new Date()
+                      var parEl = document.getElementById('poihours')
+                      for (let index = 0; index < hourArr.length; index++) {
+                        var oneDay = [ hourArr[index].substring(0, hourArr[index].indexOf(' ')), hourArr[index].substring( 1 + hourArr[index].indexOf(' ')) ]
+                        var d2 = new Date(oneDay[0]  + ' 23:59');
+                        if(d2 > d1) {
+                          var el = document.createElement('tr')
+                          el.innerHTML = '<td style="padding:0px;">' + oneDay[0] +'</td><td style="padding:0px;">' + oneDay[1] + '</td>'
+                          parEl.appendChild(el)
+                        }
+                      }
+                    })();
+                  </script>
+                <tmpl_else>
+
+              
+                    <table id="poihours" style="margin:0px; padding:0px; width:100%;">
+                      <tr>
+                      <td style="padding:0px;" id="sunday_hours" class="sunhour">Sunday</td>
+                      <td style="padding:0px;" id="sunday_hours_label" class="sunhour"><TMPL_VAR NAME="SUN_OP"> - <TMPL_VAR NAME="SUN_CL"></td>
+                      </tr>
+                     <tr>
+                      <td style="padding:0px;" id="monday_hours_label" class="monhour">Monday</td>
+                      <td style="padding:0px;" id="monday_hours" class="monhour"><TMPL_VAR NAME="MON_OP"> - <TMPL_VAR NAME="MON_CL"></td>
+                     </tr>
+                     <tr>
+                      <td style="padding:0px;" id="tuesday_hours" class="tuehour">Tuesday</td>
+                      <td style="padding:0px;" id="tuesday_hours_label" class="tuehour"><TMPL_VAR NAME="TUE_OP"> - <TMPL_VAR NAME="TUE_CL"></td>
+                     </tr>
+                     <tr>
+                      <td style="padding:0 10px 0 0;" id="wednesday_hours" class="wedhour">Wednesday&nbsp;</td>
+                      <td style="padding:0px;" id="wednesday_hours_label" class="wedhour"><TMPL_VAR NAME="WED_OP"> - <TMPL_VAR NAME="WED_CL"></td>
+                     </tr>
+                     <tr>
+                      <td style="padding:0px;" id="thursday_hours" class="thuhour">Thursday</td>
+                      <td style="padding:0px;" id="thursday_hours_label" class="thuhour"><TMPL_VAR NAME="THU_OP"> - <TMPL_VAR NAME="THU_CL"></td>
+                     </tr>
+                     <tr>
+                      <td style="padding:0px;" id="friday_hours" class="frihour">Friday</td>
+                      <td style="padding:0px;" id="friday_hours_label" class="frihour"><TMPL_VAR NAME="FRI_OP"> - <TMPL_VAR NAME="FRI_CL"></td>
+                     </tr>
+                     <tr>
+                      <td style="padding:0px;" id="saturday_hours" class="sathour">Saturday</td>
+                      <td style="padding:0px;" id="saturday_hours_label" class="sathour"><TMPL_VAR NAME="SAT_OP"> - <TMPL_VAR NAME="SAT_CL"></td>
+                     </tr>
+                     
+                    </table>
+                    
+                </tmpl_if>
+              
+              
+                <!-- </tmpl/_if> -->
+              </div> <!-- close of hours half -->
+
+              <!-- desktop about section-->
+              <div class="mobileOnly" style="display: none;">
+                <div class="headerLabel regulartext<tmpl_var name='icon'>" style="margin-top: 15px;">The widest selection of authentic Disney Merchandise</div>
+
+                <div class="regulartext<tmpl_var name='icon'>">Disney store is a premier holiday & Christmas store meeting the gifting needs of girls, boys, men, & women. Find Disney Princess dresses inspired by Rapunzel, Cinderella, Tiana and more. Like Star Wars and Marvel’s Avengers? We have cosplay & costumes, too, from Rey & Kylo Ren to Iron Man & Captain Marvel. Our magical retail experience also includes everything from for adults & kids. Find Disney clothing, toys, games, and stuffed animals from Dumbo to the Child. Turn your home into a Disney castle with home décor inspired by movies and Disney Parks attractions. Visiting a Disney store can feel like a magical Disney vacation, so wear your Mickey Mouse & Minnie Mouse ears.</div>
+              </div>
+              <!-- close of desktop about section-->
+              
+            
+            </div> <!-- close of address block div -->
+        
+        </div>  <!-- close of right half -->
+
+      </div> <!-- close of fullwidth -->
+
+      <!-- <div class="vid-container" style="width: 100%; clear: both; display:none;">
+        IFRAME Example:<br>
+        <iframe src="//players.brightcove.net/87100201001/default_default/index.html?videoId=5449827638001" allowfullscreen webkitallowfullscreen mozallowfullscreen width="450" height="300"></iframe>
+
+        <br>JS Example:<br>
+        <video data-video-id="5449827638001" data-account="87100201001" data-player="default" data-embed="default" data-application-id class="video-js" controls width="450" height="300"></video>
+        <script src="//players.brightcove.net/87100201001/default_default/index.min.js"></script>
+
+      </div> -->
+    
+      
+      <div class="overlay"></div>
+
+      <div class="modal">
+        <a href="#" class="closeBtn"></a>
+        <div id="lightwindow_title_bar" style="position:absolute; left:0px; top:0px; padding-top:2px; height:28px; width: 366px;">
+          <div id="lightwindow_title_bar_inner" style="">
+            <!-- <span id="lightwindow_title_bar_title">Send to Phone</span> -->
+          </div>
+        </div>
+        <div class="bottom_bar"></div>
+        <p></p>
+      </div>
+
+      <div class="footer" style="display: none;">
+
+        <div id="w2gifooter">
+            <script type="text/javascript">
+      
+            var d = new Date()
+      
+            document.write("<a href='http://www.brandify.com' target='_new'>Store Locator Software</a> Powered by Brandify ")
+                                  document.write("Copyright &copy; ")
+            document.write(d.getFullYear())
+      
+            document.write(", All Rights Reserved.<br/>")                   
+      
+          </script>
+         
+          </div>
+          
+        <div id="navteqfooter" style="display: none;">
+          <script type="text/javascript">
+                        var d = new Date ()
+                        document.write(" <img src=/w2gi/images/logo_navteq_large.gif> ")
+                        document.write(" &copy; Copyright ")
+                        document.write(d.getFullYear())
+                        document.write(" NAVTEQ Corp.  ")
+          </script>
+          <a href="http://www.brandify.com/company/terms/" onClick="window.open(this.href,'_blank','width=988,height=600,scrollbars=yes,location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=yes');return false;">Use Subject to and Conditions</a>
+        </div>
+
+      </div>
+      <br class="clear">
+      <div class="overlay"></div>
+            <div class="modal" role="dialog" aria-modal="true" tabindex="0">
+                <a href="#" class="closeBtn" aria-label="Close" onkeydown="returnFocus(event);"></a>
+                <p></p>
+            </div>
+    
+    </div><!-- end w2gilocalmain  -->
+<footer style="clear: both;">
+    
+        <nav>
+            <ul>
+                <li>© Disney, All Rights Reserved</li>
+                <li><a href="https://disneytermsofuse.com/" target="_blank">Terms of Use</a></li>
+                <li><a href="https://support.disney.com/hc/en-us/articles/360000829466-Legal-Notices" target="_blanks" title="">Additional Content Information</a></li>
+                <li><a href="https://privacy.thewaltdisneycompany.com/en/" target="_blank" title="">Privacy Policy</a></li>
+                <li><a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights/" target="_blank" title="">Your California Privacy Rights</a></li>
+                <li><a href="https://privacyportal-de.onetrust.com/webform/64f077b5-2f93-429f-a005-c0206ec0738e/0a4f1f0b-7130-421f-971d-ef578c0bce6d" target="_blank" title="">Do Not Sell My Personal Information</a></li>
+                <li><a href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/" target="_blank">Children's Online Privacy Policy</a></li>
+                <li><a href="https://thewaltdisneycompany.com/?ppLink=pp_ds" target="_blank">About Disney</a></li>
+                <li><a href="https://preferences-mgr.truste.com/?aid=disneystore01&amp;pid=disney01&amp;type=disneystore" target="_blank">Interest-Based Ads</a></li>
+                <li><a href="https://www.thewaltdisneycompany.com/wp-content/uploads/2019/09/California-Transparency-in-Supply-Chains-Act.pdf" target="_blank" title="">California Transparency in Supply Chains Act</a></li>
+            </ul>
+        </nav>  
+    
+
+</footer>
+
+    <script type="text/javascript" src="//stores.shopdisney.com/js/videopopup.js"></script>
+
+    <script>
+    function removeExtra() {
+      setTimeout(function() {
+        var subheaders = document.getElementsByClassName('ranknumber');
+        var readjustclass = document.getElementsByClassName('readjust');
+        if(readjustclass.length == 2) {
+          readjustclass[0].style.marginLeft ="0";
+          readjustclass[1].style.marginLeft ="0";
+        }
+        if (subheaders.length == 2) {
+          subheaders[1].style.display="none";
+        }
+      }, 500);
+    }
+
+    /*var modalOverlay = $('.mymodaloverlay'),
+        modalContent = $('.mymodal');
+
+    /*function myModalOpen(url,ck) {
+        modalOverlay.fadeIn();
+        modalContent.fadeIn();
+        $('.mymodal a.modalLink').attr('href',url + '-' + ck);
+    }
+    
+    $(document).ready(function(){
+      $('.mymodal a.modalClose').on('click',function(){
+          modalOverlay.fadeOut();
+          modalContent.fadeOut();
+      });
+      
+    });*/
+
+    $(function () {
+       $('#vidBox').VideoPopUp({
+          backgroundColor: "#17212a",
+          opener: "video1",
+            maxweight: "340",
+            idvideo: "v1"
+        });
+    });
+
+    window.addEventListener('load', function(event) {
+        removeExtra(event);
+    }, false);
+    $(document).ready(function(){
+   $('#v1').bind('contextmenu',function() { return false; });
+});
+
+      var modalOverlay = $('.mymodaloverlay'),
+        modalContent = $('.mymodal');
+
+      function myModalOpen(url,ck) {
+        modalOverlay.fadeIn();
+        modalContent.fadeIn();
+        $('.mymodal a.modalLink').attr('href',url + '-' + ck);
+        $('.mymodal').focus();
+      }
+
+      $(document).ready(function(){
+        $('.mymodal a.modalClose').on('click',function(){
+            modalOverlay.fadeOut();
+            modalContent.fadeOut();
+        });
+        
+    });
+    </script>
+    <script async src="//static.where2getit.com/w2gi/javascript/client.min.js" data-a="4DE64C2C-25C4-11E0-9AF7-57014E48D7F4" data-s="disney" id="brandifyjs"></script>
+  </body>
+</html>
